@@ -90,6 +90,19 @@ h2 {
     height: 80px;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0;
+}
+
+.nav-logo img {
+    height: 60px;
+    width: auto;
+    transition: var(--transition);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -116,6 +129,10 @@ h2 {
     color: var(--light-text);
     font-family: var(--font-primary);
     cursor: pointer;
+}
+
+.nav-logo img {
+        height: 45px;
 }
 
 /* ===== Hero Section ===== */
