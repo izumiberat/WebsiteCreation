@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional static websites for French businesses. Transparent pricing, SEO optimized, mobile-friendly websites with ongoing maintenance.">
+    <meta name="keywords" content="website development, static website, business website, SEO optimization, French businesses">
+    <meta name="author" content="IzuTech">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="IzuTech - Professional Websites for Local Businesses">
+    <meta property="og:description" content="Affordable static websites with SEO optimization for French businesses. Transparent pricing from €490.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://web.izutech.fr">
+    <meta property="og:image" content="https://web.izutech.fr/photo/izutech-logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IzuTech - Professional Websites for Local Businesses">
+    <meta name="twitter:description" content="Affordable static websites with SEO optimization for French businesses.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="photo/izutech-logo.png">
+    
+    <title>IzuTech - Professional Static Websites for Local Businesses</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="photo/izutech-logo.png" alt="IzuTech Web Services" width="160" height="40">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a></li>
+                <li class="nav-item"><a href="#process" class="nav-link" data-i18n="nav.process">Process</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-item">
+                    <select id="language-selector" class="language-selector">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero.title">Professional Websites for Local Businesses</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Beautiful, fast, and SEO-optimized static websites that help customers find your business online. Transparent pricing from €490.</p>
+                <div class="cta-container">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Get Your Website</a>
+                    <a href="#pricing" class="btn btn-secondary" data-i18n="hero.secondary">See Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">What's Included in Every Website</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 data-i18n="services.feature1.title">Fast & Mobile-Friendly</h3>
+                    <p data-i18n="services.feature1.description">Optimized for all devices with lightning-fast loading speeds.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3 data-i18n="services.feature2.title">SEO Optimized</h3>
+                    <p data-i18n="services.feature2.description">Built-in search engine optimization to help customers find you.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 data-i18n="services.feature3.title">Professional Design</h3>
+                    <p data-i18n="services.feature3.description">Custom, modern design that reflects your brand identity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📧</div>
+                    <h3 data-i18n="services.feature4.title">Contact Forms</h3>
+                    <p data-i18n="services.feature4.description">Working contact forms that deliver messages directly to your email.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title" data-i18n="pricing.title">Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <!-- Basic Package -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge" data-i18n="pricing.mostPopular">Most Popular</div>
+                    <h3 data-i18n="pricing.basic.title">Basic Website Package</h3>
+                    <div class="price">€490</div>
+                    <p class="price-description" data-i18n="pricing.basic.description">One-time fee</p>
+                    
+                    <ul class="features-list">
+                        <li data-i18n="pricing.basic.features.0">Up to 5 pages</li>
+                        <li data-i18n="pricing.basic.features.1">Mobile-responsive design</li>
+                        <li data-i18n="pricing.basic.features.2">Basic SEO optimization</li>
+                        <li data-i18n="pricing.basic.features.3">Contact form</li>
+                        <li data-i18n="pricing.basic.features.4">Hosting on github.io</li>
+                        <li data-i18n="pricing.basic.features.5">Basic training</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary" data-i18n="pricing.cta">Get Started</a>
+                </div>
+
+                <!-- Add-ons -->
+                <div class="pricing-card">
+                    <h3 data-i18n="pricing.addons.title">Add-on Services</h3>
+                    <div class="addons-list">
+                        <div class="addon-item">
+                            <span data-i18n="pricing.addons.domain">Custom Domain Name</span>
+                            <span class="addon-price">+€50/year</span>
+                        </div>
+                        <div class="addon-item">
+                            <span data-i18n="pricing.addons.email">Professional Email</span>
+                            <span class="addon-price">+€60/year</span>
+                        </div>
+                        <div class="addon-item">
+                            <span data-i18n="pricing.addons.googleBusiness">Google Business Setup</span>
+                            <span class="addon-price">+€100</span>
+                        </div>
+                        <div class="addon-item">
+                            <span data-i18n="pricing.addons.multilingual">Multilingual (Bilingual)</span>
+                            <span class="addon-price">+€150</span>
+                        </div>
+                        <div class="addon-item">
+                            <span data-i18n="pricing.addons.maintenance">Ongoing Maintenance</span>
+                            <span class="addon-price">+€30/month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2 class="section-title" data-i18n="process.title">Simple 4-Step Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="process.step1.title">Consultation</h3>
+                    <p data-i18n="process.step1.description">We discuss your business needs and requirements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="process.step2.title">Design & Development</h3>
+                    <p data-i18n="process.step2.description">Your website is built within 5-7 business days.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-i18n="process.step3.title">Review & Feedback</h3>
+                    <p data-i18n="process.step3.description">You review the website and request changes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 data-i18n="process.step4.title">Launch & Training</h3>
+                    <p data-i18n="process.step4.description">Your website goes live with basic training provided.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Start Your Project</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 data-i18n="contact.getInTouch">Get in Touch</h3>
+                    <p data-i18n="contact.description">Ready to establish your online presence? Contact us for a free consultation.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <span>contact@izutech.fr</span>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">💬</div>
+                            <span data-i18n="contact.responseTime">Response within 24 hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business" data-i18n="contact.form.business">Business Type</label>
+                            <input type="text" id="business" name="business">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Project Details *</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q1">How long does it take to build a website?</h3>
+                    <p data-i18n="faq.a1">Most websites are completed within 5-7 business days after we receive all necessary information.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q2">Do you provide ongoing support?</h3>
+                    <p data-i18n="faq.a2">Yes, we offer optional monthly maintenance packages for updates and technical support.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q3">Can I update the website myself?</h3>
+                    <p data-i18n="faq.a3">We provide basic training, but for frequent updates, we recommend our maintenance package.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="photo/izutech-logo.png" alt="IzuTech" width="120" height="30">
+                </div>
+                <p data-i18n="footer.copyright">© 2025 IzuTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
