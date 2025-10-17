@@ -458,6 +458,18 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.footer-logo img {
+    height: 80px;
+    width: auto;
+    opacity: 0.9;
+    transition: var(--transition);
+}
+
+.footer-logo:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
     .nav-menu {
