@@ -1,0 +1,214 @@
+{
+  "en": {
+    "meta": {
+      "title": "IzuTech - Professional Static Websites for Local Businesses",
+      "description": "Professional static websites for French businesses. Transparent pricing from €490. SEO optimized, mobile-friendly websites with ongoing maintenance."
+    },
+    "nav": {
+      "services": "Services",
+      "pricing": "Pricing",
+      "process": "Process",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Professional Websites for Local Businesses",
+      "subtitle": "Beautiful, fast, and SEO-optimized static websites that help customers find your business online. Transparent pricing from €490.",
+      "cta": "Get Your Website",
+      "secondary": "See Pricing"
+    },
+    "services": {
+      "title": "What's Included in Every Website",
+      "feature1": {
+        "title": "Fast & Mobile-Friendly",
+        "description": "Optimized for all devices with lightning-fast loading speeds."
+      },
+      "feature2": {
+        "title": "SEO Optimized",
+        "description": "Built-in search engine optimization to help customers find you."
+      },
+      "feature3": {
+        "title": "Professional Design",
+        "description": "Custom, modern design that reflects your brand identity."
+      },
+      "feature4": {
+        "title": "Contact Forms",
+        "description": "Working contact forms that deliver messages directly to your email."
+      }
+    },
+    "pricing": {
+      "title": "Transparent Pricing",
+      "mostPopular": "Most Popular",
+      "basic": {
+        "title": "Basic Website Package",
+        "description": "One-time fee",
+        "features": [
+          "Up to 5 pages",
+          "Mobile-responsive design",
+          "Basic SEO optimization",
+          "Contact form",
+          "Hosting on github.io",
+          "Basic training"
+        ]
+      },
+      "addons": {
+        "title": "Add-on Services",
+        "domain": "Custom Domain Name",
+        "email": "Professional Email",
+        "googleBusiness": "Google Business Setup",
+        "multilingual": "Multilingual (Bilingual)",
+        "maintenance": "Ongoing Maintenance"
+      },
+      "cta": "Get Started"
+    },
+    "process": {
+      "title": "Simple 4-Step Process",
+      "step1": {
+        "title": "Consultation",
+        "description": "We discuss your business needs and requirements."
+      },
+      "step2": {
+        "title": "Design & Development",
+        "description": "Your website is built within 5-7 business days."
+      },
+      "step3": {
+        "title": "Review & Feedback",
+        "description": "You review the website and request changes."
+      },
+      "step4": {
+        "title": "Launch & Training",
+        "description": "Your website goes live with basic training provided."
+      }
+    },
+    "contact": {
+      "title": "Start Your Project",
+      "getInTouch": "Get in Touch",
+      "description": "Ready to establish your online presence? Contact us for a free consultation.",
+      "responseTime": "Response within 24 hours",
+      "form": {
+        "name": "Name *",
+        "email": "Email *",
+        "business": "Business Type",
+        "message": "Project Details *",
+        "submit": "Send Message"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How long does it take to build a website?",
+      "a1": "Most websites are completed within 5-7 business days after we receive all necessary information.",
+      "q2": "Do you provide ongoing support?",
+      "a2": "Yes, we offer optional monthly maintenance packages for updates and technical support.",
+      "q3": "Can I update the website myself?",
+      "a3": "We provide basic training, but for frequent updates, we recommend our maintenance package."
+    },
+    "footer": {
+      "copyright": "© 2025 IzuTech. All rights reserved."
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "IzuTech - Sites Web Statiques Professionnels pour les Entreprises Locales",
+      "description": "Sites web statiques professionnels pour les entreprises françaises. Tarification transparente à partir de 490€. Sites optimisés SEO, mobiles avec maintenance continue."
+    },
+    "nav": {
+      "services": "Services",
+      "pricing": "Tarifs",
+      "process": "Processus",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Sites Web Professionnels pour les Entreprises Locales",
+      "subtitle": "Des sites web statiques beaux, rapides et optimisés SEO qui aident les clients à trouver votre entreprise en ligne. Tarification transparente à partir de 490€.",
+      "cta": "Obtenir Votre Site Web",
+      "secondary": "Voir les Tarifs"
+    },
+    "services": {
+      "title": "Ce Qui Est Inclus dans Chaque Site Web",
+      "feature1": {
+        "title": "Rapide & Mobile-Friendly",
+        "description": "Optimisé pour tous les appareils avec des vitesses de chargement ultra-rapides."
+      },
+      "feature2": {
+        "title": "Optimisé SEO",
+        "description": "Optimisation intégrée pour les moteurs de recherche pour aider les clients à vous trouver."
+      },
+      "feature3": {
+        "title": "Design Professionnel",
+        "description": "Design moderne et personnalisé qui reflète l'identité de votre marque."
+      },
+      "feature4": {
+        "title": "Formulaires de Contact",
+        "description": "Formulaires de contact fonctionnels qui envoient les messages directement à votre email."
+      }
+    },
+    "pricing": {
+      "title": "Tarification Transparente",
+      "mostPopular": "Le Plus Populaire",
+      "basic": {
+        "title": "Pack Site Web de Base",
+        "description": "Forfait unique",
+        "features": [
+          "Jusqu'à 5 pages",
+          "Design adapté mobile",
+          "Optimisation SEO de base",
+          "Formulaire de contact",
+          "Hébergement sur github.io",
+          "Formation de base"
+        ]
+      },
+      "addons": {
+        "title": "Services Supplémentaires",
+        "domain": "Nom de Domaine Personnalisé",
+        "email": "Email Professionnel",
+        "googleBusiness": "Configuration Google Business",
+        "multilingual": "Multilingue (Bilingue)",
+        "maintenance": "Maintenance Continue"
+      },
+      "cta": "Commencer"
+    },
+    "process": {
+      "title": "Processus Simple en 4 Étapes",
+      "step1": {
+        "title": "Consultation",
+        "description": "Nous discutons de vos besoins et exigences commerciales."
+      },
+      "step2": {
+        "title": "Design & Développement",
+        "description": "Votre site web est construit en 5-7 jours ouvrables."
+      },
+      "step3": {
+        "title": "Revue & Feedback",
+        "description": "Vous revisez le site web et demandez des modifications."
+      },
+      "step4": {
+        "title": "Lancement & Formation",
+        "description": "Votre site web est mis en ligne avec une formation de base fournie."
+      }
+    },
+    "contact": {
+      "title": "Démarrez Votre Projet",
+      "getInTouch": "Entrer en Contact",
+      "description": "Prêt à établir votre présence en ligne ? Contactez-nous pour une consultation gratuite.",
+      "responseTime": "Réponse sous 24 heures",
+      "form": {
+        "name": "Nom *",
+        "email": "Email *",
+        "business": "Type d'Entreprise",
+        "message": "Détails du Projet *",
+        "submit": "Envoyer le Message"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "q1": "Combien de temps faut-il pour construire un site web ?",
+      "a1": "La plupart des sites web sont terminés en 5-7 jours ouvrables après réception de toutes les informations nécessaires.",
+      "q2": "Fournissez-vous un support continu ?",
+      "a2": "Oui, nous proposons des forfaits de maintenance mensuels optionnels pour les mises à jour et le support technique.",
+      "q3": "Puis-je mettre à jour le site web moi-même ?",
+      "a3": "Nous fournissons une formation de base, mais pour des mises à jour fréquentes, nous recommandons notre forfait de maintenance."
+    },
+    "footer": {
+      "copyright": "© 2025 IzuTech. Tous droits réservés."
+    }
+  }
+}
