@@ -1,5 +1,48 @@
 // Language management and form handling
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu?.classList.contains('active') && 
+            !e.target.closest('.nav-menu') && 
+            !e.target.closest('.hamburger') &&
+            !e.target.closest('.language-selector')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu?.classList.contains('active')) {
+            closeMobileMenu();
+            hamburger?.focus();
+        }
+    });
+    
+    function closeMobileMenu() {
+        hamburger?.classList.remove('active');
+        navMenu?.classList.remove('active');
+        hamburger?.setAttribute('aria-expanded', 'false');
+    }
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(element => {
+        element.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+    });
     // Language management
     const languageSelector = document.getElementById('language-selector');
     let currentLanguage = 'en';
