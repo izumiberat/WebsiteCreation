@@ -1,0 +1,171 @@
+// Language management and form handling
+document.addEventListener('DOMContentLoaded', function() {
+    // Language management
+    const languageSelector = document.getElementById('language-selector');
+    let currentLanguage = 'en';
+    let translations = {};
+
+    // Load translations
+    async function loadTranslations(lang) {
+        if (translations[lang]) {
+            return translations[lang];
+        }
+
+        try {
+            const response = await fetch('i18n.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            const allTranslations = await response.json();
+            translations = allTranslations;
+            
+            return translations[lang] || {};
+        } catch (error) {
+            console.error('Error loading translations:', error);
+            return {};
+        }
+    }
+
+    // Update page content with translations
+    function updateContent(translations) {
+        if (!translations.meta) return;
+
+        // Update meta tags
+        document.title = translations.meta.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', translations.meta.description);
+        }
+
+        // Update Open Graph tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDescription = document.querySelector('meta[property="og:description"]');
+        if (ogTitle) ogTitle.setAttribute('content', translations.meta.title);
+        if (ogDescription) ogDescription.setAttribute('content', translations.meta.description);
+        
+        // Update all elements with data-i18n attribute
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const value = getNestedValue(translations, key);
+            
+            if (value !== undefined && value !== null) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.setAttribute('placeholder', value);
+                } else if (element.tagName === 'IMG' && element.hasAttribute('alt')) {
+                    element.setAttribute('alt', value);
+                } else if (element.hasAttribute('aria-label')) {
+                    element.setAttribute('aria-label', value);
+                } else {
+                    element.textContent = value;
+                }
+            }
+        });
+
+        // Update HTML lang attribute
+        document.documentElement.setAttribute('lang', currentLanguage);
+        
+        // Update language selector
+        if (languageSelector) {
+            languageSelector.value = currentLanguage;
+        }
+    }
+
+    // Helper function to get nested object values
+    function getNestedValue(obj, path) {
+        return path.split('.').reduce((current, key) => {
+            return current && current[key] !== undefined ? current[key] : undefined;
+        }, obj);
+    }
+
+    // Initialize language
+    async function initLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage;
+        const userLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+        
+        currentLanguage = localStorage.getItem('preferredLanguage') || userLang;
+        
+        const loadedTranslations = await loadTranslations(currentLanguage);
+        updateContent(loadedTranslations);
+    }
+
+    // Language selector change event
+    if (languageSelector) {
+        languageSelector.addEventListener('change', async function(e) {
+            currentLanguage = e.target.value;
+            localStorage.setItem('preferredLanguage', currentLanguage);
+            
+            const loadedTranslations = await loadTranslations(currentLanguage);
+            updateContent(loadedTranslations);
+        });
+    }
+
+    // Form submission handling
+    const contactForm = document.getElementById('lead-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(contactForm);
+                
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    contactForm.innerHTML = `
+                        <div style="text-align: center; padding: 2rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Thank You!</h3>
+                            <p>Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                        </div>
+                    `;
+                } else {
+                    throw new Error('Form submission failed');
+                }
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('Sorry, there was an error sending your message. Please try again or email us directly.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Initialize the page
+    initLanguage();
+
+    // Preload other language for better performance
+    const browserLang = navigator.language || navigator.userLanguage;
+    const otherLang = browserLang.startsWith('fr') ? 'en' : 'fr';
+    loadTranslations(otherLang);
+});
