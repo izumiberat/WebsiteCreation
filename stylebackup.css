@@ -115,27 +115,10 @@ h2 {
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
-    position: relative;
-    padding: 0.5rem 0;
 }
 
 .nav-link:hover {
     color: var(--primary-blue);
-}
-
-.nav-link:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-blue);
-    transition: var(--transition);
-}
-
-.nav-link:hover:after {
-    width: 100%;
 }
 
 .language-selector {
@@ -145,35 +128,11 @@ h2 {
     background: var(--light-bg);
     color: var(--light-text);
     font-family: var(--font-primary);
-    font-size: 0.9rem;
     cursor: pointer;
-    transition: var(--transition);
-    margin-left: 1rem;
 }
 
-.language-selector:focus {
-    outline: none;
-    border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
-}
-
-/* Hamburger menu for mobile */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0.5rem;
-}
-
-.bar {
-    width: 25px;
-    height: 2px;
-    background: var(--light-text);
-    margin: 3px 0;
-    transition: var(--transition);
-    border-radius: 2px;
+.nav-logo img {
+        height: 45px;
 }
 
 /* ===== Hero Section ===== */
@@ -182,23 +141,6 @@ h2 {
     background: linear-gradient(135deg, #0A2540 0%, #1A365D 100%);
     color: white;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>') no-repeat bottom right;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
 }
 
 .hero-title {
@@ -227,9 +169,6 @@ h2 {
     transition: var(--transition);
     border: 2px solid transparent;
     cursor: pointer;
-    text-align: center;
-    gap: 8px;
-    line-height: 1.4;
 }
 
 .btn-primary {
@@ -416,7 +355,6 @@ h2 {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0 auto 1.5rem;
-    box-shadow: var(--shadow-md);
 }
 
 /* ===== Contact Section ===== */
@@ -464,8 +402,7 @@ h2 {
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select {
+.form-group textarea {
     width: 100%;
     padding: 14px 16px;
     border: 1px solid var(--light-border);
@@ -477,8 +414,7 @@ h2 {
 }
 
 .form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
+.form-group textarea:focus {
     outline: none;
     border-color: var(--primary-blue);
     box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
@@ -503,12 +439,6 @@ h2 {
     padding: 2rem;
     border-radius: var(--border-radius);
     border: 1px solid var(--light-border);
-    transition: var(--transition);
-}
-
-.faq-item:hover {
-    border-color: var(--primary-blue);
-    transform: translateY(-2px);
 }
 
 .faq-item h3 {
@@ -520,20 +450,16 @@ h2 {
 .footer {
     background: var(--primary-dark);
     color: white;
-    padding: 4rem 0 3rem;
+    padding: 3rem 0;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+.footer-logo {
+    margin-bottom: 1rem;
 }
 
 .footer-logo img {
-    height: 100px;
+    height: 80px;
     width: auto;
     opacity: 0.9;
     transition: var(--transition);
@@ -544,67 +470,25 @@ h2 {
     transform: scale(1.05);
 }
 
-.footer p {
-    margin: 0;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 500px;
-}
-
-.footer a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer a:hover {
-    color: white;
-}
-
-/* ===== Mobile Responsive Design ===== */
+/* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 1.25rem;
-    }
-    
-    /* Navigation fixes */
-    .hamburger {
-        display: flex;
-    }
-    
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background: var(--light-bg);
-        width: 100%;
-        text-align: center;
-        transition: var(--transition);
-        box-shadow: var(--shadow-lg);
-        padding: 2rem 0;
-        gap: 1.5rem;
+        display: none;
     }
     
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .nav-logo img {
-        height: 45px;
-    }
-    
-    .language-selector {
-        margin-top: 1rem;
-        margin-left: 0;
-    }
-    
-    /* Hero section */
     .hero {
         padding: 120px 0 80px;
     }
     
-    /* Button fixes */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
     .cta-container {
         flex-direction: column;
         align-items: center;
@@ -614,80 +498,4 @@ h2 {
         width: 100%;
         max-width: 280px;
     }
-    
-    /* Grid centering fixes */
-    .services-grid,
-    .pricing-grid,
-    .process-steps,
-    .faq-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .pricing-card.featured {
-        transform: none;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    /* Card centering */
-    .service-card,
-    .pricing-card,
-    .step,
-    .faq-item {
-        margin: 0 auto;
-        max-width: 400px;
-        width: 100%;
-    }
-    
-    /* Footer fixes */
-    .footer-logo img {
-        height: 80px;
-    }
-    
-    .footer {
-        padding: 3rem 0 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .service-card,
-    .pricing-card,
-    .faq-item {
-        padding: 1.5rem;
-    }
-    
-    .footer-logo img {
-        height: 60px;
-    }
-}
-
-/* ===== Accessibility & Performance ===== */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-/* Focus styles for keyboard navigation */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-    outline: 2px solid var(--primary-blue);
-    outline-offset: 2px;
 }
