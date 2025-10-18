@@ -484,6 +484,25 @@ h2 {
     box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
 }
 
+/* Form guidance styles */
+.form-guidance {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-blue);
+}
+
+.form-guidance p {
+    margin: 0;
+    color: var(--light-text-secondary);
+    font-size: 0.9rem;
+}
+
+.form-guidance small {
+    color: var(--light-text-secondary);
+}
+
 /* ===== FAQ Section ===== */
 .faq {
     padding: var(--section-padding);
