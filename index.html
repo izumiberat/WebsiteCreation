@@ -181,58 +181,185 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+        <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact.title">Start Your Project</h2>
+            <h2 class="section-title" data-i18n="contact.title">Start Your Website Project</h2>
             <div class="contact-grid">
-                <div class="contact-info">
-                    <h3 data-i18n="contact.getInTouch">Get in Touch</h3>
-                    <p data-i18n="contact.description">Ready to establish your online presence? Contact us for a free consultation.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">📧</div>
-                            <span>contact@izutech.fr</span>
+                <!-- Trust Section - Mobile First -->
+                <div class="trust-section-mobile">
+                    <h3 data-i18n="contact.trust.title">Why Businesses Choose IzuTech</h3>
+                    <div class="trust-points-mobile">
+                        <div class="trust-point-mobile">
+                            <div class="trust-icon">🚀</div>
+                            <h4 data-i18n="contact.trust.points.0.title">Quick Launch</h4>
+                            <p data-i18n="contact.trust.points.0.mobileText">5-7 days</p>
                         </div>
-                        <div class="contact-method">
-                            <div class="method-icon">💬</div>
-                            <span data-i18n="contact.responseTime">Response within 24 hours</span>
+                        <div class="trust-point-mobile">
+                            <div class="trust-icon">💰</div>
+                            <h4 data-i18n="contact.trust.points.1.title">Transparent Pricing</h4>
+                            <p data-i18n="contact.trust.points.1.mobileText">No hidden fees</p>
+                        </div>
+                        <div class="trust-point-mobile">
+                            <div class="trust-icon">💬</div>
+                            <h4 data-i18n="contact.trust.points.2.title">24h Response</h4>
+                            <p data-i18n="contact.trust.points.2.mobileText">Fast reply</p>
+                        </div>
+                        <div class="trust-point-mobile">
+                            <div class="trust-icon">📱</div>
+                            <h4 data-i18n="contact.trust.points.3.title">Mobile-First</h4>
+                            <p data-i18n="contact.trust.points.3.mobileText">All devices</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="lead-form" action="https://formspree.io/f/mgvndjvo" method="POST">
-                        <div class="form-group">
-                            <label for="name" data-i18n="contact.form.name">Name *</label>
-                            <input type="text" id="name" name="name" required>
+                <!-- Contact Options - Shows first on mobile -->
+                <div class="contact-options">
+                    <div class="contact-option-card">
+                        <div class="option-icon">📧</div>
+                        <h3 data-i18n="contact.options.form.title">Send project details</h3>
+                        <p data-i18n="contact.options.form.description">Share your business needs and we'll provide a customized quote within 24 hours</p>
+                        <div class="option-actions">
+                            <button class="btn btn-primary show-form-btn" data-i18n="contact.options.form.button">Fill out form</button>
                         </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="contact.form.email">Email *</label>
-                            <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="contact-option-card">
+                        <div class="option-icon">📞</div>
+                        <h3 data-i18n="contact.options.call.title">Quick consultation</h3>
+                        <p data-i18n="contact.options.call.description">15-minute free call to discuss your website needs and get immediate answers</p>
+                        <div class="option-actions">
+                            <a href="https://calendly.com/izutech-fr/15min" target="_blank" class="btn btn-secondary" data-i18n="contact.options.call.button">Book a call</a>
                         </div>
-                        <div class="form-group">
-                            <label for="business" data-i18n="contact.form.business">Business Type</label>
-                            <input type="text" id="business" name="business">
+                    </div>
+                    
+                    <div class="contact-option-card">
+                        <div class="option-icon">✉️</div>
+                        <h3 data-i18n="contact.options.email.title">Email directly</h3>
+                        <p data-i18n="contact.options.email.description">Prefer email? Send us your requirements and we'll respond quickly.</p>
+                        <div class="option-actions">
+                            <a href="mailto:contact@izutech.fr" class="btn btn-card email-direct-btn">
+                                <span>contact@izutech.fr</span>
+                            </a>
                         </div>
-                        <div class="form-group">
-                            <label for="message" data-i18n="contact.form.message">Project Details *</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your business and what you'd like to achieve. Mention if you're interested in online payments, booking systems, or other add-ons."></textarea>
+                    </div>
+                </div>
+
+                <!-- Contact Form & Trust Section -->
+                <div class="contact-form-and-trust">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <div class="form-header">
+                            <h3 data-i18n="contact.form.title">Tell us about your website needs</h3>
+                            <button class="back-to-options btn btn-text" data-i18n="contact.form.back">← Back to options</button>
                         </div>
                         
-                        <!-- Gentle guidance outside the form -->
-                        <div class="form-guidance">
-                            <p><small>Popular add-ons: Online Payments • Booking Systems • Logo Design • Multilingual • Ongoing Support</small></p>
+                        <div class="contact-form">
+                            <form id="lead-form" action="https://formspree.io/f/mgvndjvo" method="POST">
+                                <div class="form-group">
+                                    <label for="name" data-i18n="contact.form.name">Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" data-i18n="contact.form.email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" data-i18n="contact.form.phone">Phone Number (Optional)</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+33 1 23 45 67 89">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="business" data-i18n="contact.form.business">Business Type</label>
+                                    <input type="text" id="business" name="business" placeholder="e.g., Restaurant, Salon, Local Shop">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" data-i18n="contact.form.message">Project Details *</label>
+                                    <textarea id="message" name="message" rows="4" required placeholder="Tell us about your business, what you'd like to achieve with your website, and any specific features you need (online payments, booking, multilingual, etc.)"></textarea>
+                                </div>
+                                
+                                <!-- Add-ons guidance -->
+                                <div class="addons-guidance">
+                                    <p><strong>Popular add-ons to mention:</strong></p>
+                                    <div class="addons-tags">
+                                        <span class="addon-tag">Online Payments</span>
+                                        <span class="addon-tag">Booking System</span>
+                                        <span class="addon-tag">Multilingual</span>
+                                        <span class="addon-tag">Professional Logo</span>
+                                        <span class="addon-tag">Ongoing Support</span>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">
+                                    <span class="btn-text">Get Free Quote</span>
+                                    <span class="btn-loading" style="display: none;">Sending...</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="form-success" class="form-success-message" style="display: none;">
+                            <div class="success-icon">✓</div>
+                            <h3 data-i18n="contact.success.title">Request Sent Successfully!</h3>
+                            <p data-i18n="contact.success.message">Thank you for your inquiry. We'll review your project and send you a customized quote within 24 hours.</p>
+                            <button onclick="resetForm()" class="btn btn-secondary" data-i18n="contact.success.button">Send Another Request</button>
+                        </div>
+                    </div>
+
+                    <!-- Trust Section - Desktop -->
+                    <div class="trust-section">
+                        <h3 data-i18n="contact.trust.title">Why Businesses Choose IzuTech</h3>
+                        
+                        <div class="trust-points">
+                            <div class="trust-point">
+                                <div class="trust-icon">🚀</div>
+                                <div class="trust-content">
+                                    <h4 data-i18n="contact.trust.points.0.title">Quick Launch</h4>
+                                    <p data-i18n="contact.trust.points.0.text">Website ready in 5-7 business days</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trust-point">
+                                <div class="trust-icon">💰</div>
+                                <div class="trust-content">
+                                    <h4 data-i18n="contact.trust.points.1.title">Transparent Pricing</h4>
+                                    <p data-i18n="contact.trust.points.1.text">All-inclusive pricing from €490, no surprises</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trust-point">
+                                <div class="trust-icon">💬</div>
+                                <div class="trust-content">
+                                    <h4 data-i18n="contact.trust.points.2.title">24h Response Time</h4>
+                                    <p data-i18n="contact.trust.points.2.text">We get back to you within one business day</p>
+                                </div>
+                            </div>
+                            
+                            <div class="trust-point">
+                                <div class="trust-icon">📱</div>
+                                <div class="trust-content">
+                                    <h4 data-i18n="contact.trust.points.3.title">Mobile-First Design</h4>
+                                    <p data-i18n="contact.trust.points.3.text">Optimized for all devices and screen sizes</p>
+                                </div>
+                            </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Get Free Consultation</button>
-                    </form>
+                        <!-- Additional trust element -->
+                        <div class="trust-footer">
+                            <div class="guarantee-badge">
+                                <span class="badge-icon">✅</span>
+                                <span class="badge-text" data-i18n="contact.trust.guarantee">Free Consultation & Quote</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
