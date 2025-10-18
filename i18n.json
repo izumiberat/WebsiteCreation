@@ -42,7 +42,7 @@
         "title": "Basic Website Package",
         "description": "One-time fee",
         "features": [
-          "Up to 5 pages",
+          "Up to 5 pages (or 5 sections for single-page sites)",
           "Mobile-responsive design",
           "Basic SEO optimization",
           "Contact form",
@@ -56,6 +56,10 @@
         "email": "Professional Email",
         "googleBusiness": "Google Business Setup",
         "multilingual": "Multilingual (Bilingual)",
+        "payment": "Online Payment Integration (Stripe, PayPal)",
+        "logo": "Professional Logo Creation",
+        "calendly": "Calendly Booking Integration",
+        "advancedSEO": "Advanced SEO Optimization",
         "maintenance": "Ongoing Maintenance"
       },
       "cta": "Get Started"
@@ -99,7 +103,9 @@
       "q2": "Do you provide ongoing support?",
       "a2": "Yes, we offer optional monthly maintenance packages for updates and technical support.",
       "q3": "Can I update the website myself?",
-      "a3": "We provide basic training, but for frequent updates, we recommend our maintenance package."
+      "a3": "We provide basic training, but for frequent updates, we recommend our maintenance package.",
+      "q4": "What's the difference between Basic and Advanced SEO?",
+      "a4": "Basic SEO includes on-page optimization and technical foundations. Advanced SEO adds content strategy, local SEO excellence, and link building for higher rankings."
     },
     "footer": {
       "copyright": "© 2025 IzuTech. All rights reserved."
@@ -148,7 +154,7 @@
         "title": "Pack Site Web de Base",
         "description": "Forfait unique",
         "features": [
-          "Jusqu'à 5 pages",
+          "Jusqu'à 5 pages (ou 5 sections pour les sites one-page)",
           "Design adapté mobile",
           "Optimisation SEO de base",
           "Formulaire de contact",
@@ -162,6 +168,10 @@
         "email": "Email Professionnel",
         "googleBusiness": "Configuration Google Business",
         "multilingual": "Multilingue (Bilingue)",
+        "payment": "Intégration de Paiement en Ligne (Stripe, PayPal)",
+        "logo": "Création de Logo Professionnel",
+        "calendly": "Intégration de Réservation Calendly",
+        "advancedSEO": "Optimisation SEO Avancée",
         "maintenance": "Maintenance Continue"
       },
       "cta": "Commencer"
@@ -205,7 +215,9 @@
       "q2": "Fournissez-vous un support continu ?",
       "a2": "Oui, nous proposons des forfaits de maintenance mensuels optionnels pour les mises à jour et le support technique.",
       "q3": "Puis-je mettre à jour le site web moi-même ?",
-      "a3": "Nous fournissons une formation de base, mais pour des mises à jour fréquentes, nous recommandons notre forfait de maintenance."
+      "a3": "Nous fournissons une formation de base, mais pour des mises à jour fréquentes, nous recommandons notre forfait de maintenance.",
+      "q4": "Quelle est la différence entre le SEO de base et le SEO avancé ?",
+      "a4": "Le SEO de base comprend l'optimisation on-page et les fondements techniques. Le SEO avancé ajoute une stratégie de contenu, l'excellence du SEO local et la création de liens pour des classements plus élevés."
     },
     "footer": {
       "copyright": "© 2025 IzuTech. Tous droits réservés."
