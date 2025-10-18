@@ -79,16 +79,68 @@
       }
     },
     "contact": {
-      "title": "Start Your Project",
-      "getInTouch": "Get in Touch",
-      "description": "Ready to establish your online presence? Contact us for a free consultation.",
-      "responseTime": "Response within 24 hours",
+      "title": "Start Your Website Project",
+      "trust": {
+        "title": "Why Businesses Choose IzuTech",
+        "points": [
+          {
+            "icon": "🚀",
+            "title": "Quick Launch",
+            "text": "Website ready in 5-7 business days",
+            "mobileText": "5-7 days"
+          },
+          {
+            "icon": "💰",
+            "title": "Transparent Pricing",
+            "text": "All-inclusive pricing from €490, no surprises",
+            "mobileText": "No hidden fees"
+          },
+          {
+            "icon": "💬",
+            "title": "24h Response Time",
+            "text": "We get back to you within one business day",
+            "mobileText": "Fast reply"
+          },
+          {
+            "icon": "📱",
+            "title": "Mobile-First Design",
+            "text": "Optimized for all devices and screen sizes",
+            "mobileText": "All devices"
+          }
+        ],
+        "guarantee": "Free Consultation & Quote"
+      },
+      "options": {
+        "form": {
+          "title": "Send project details",
+          "description": "Share your business needs and we'll provide a customized quote within 24 hours",
+          "button": "Fill out form"
+        },
+        "call": {
+          "title": "Quick consultation",
+          "description": "15-minute free call to discuss your website needs and get immediate answers",
+          "button": "Book a call"
+        },
+        "email": {
+          "title": "Email directly",
+          "description": "Prefer email? Send us your requirements and we'll respond quickly.",
+          "button": "contact@izutech.fr"
+        }
+      },
       "form": {
+        "title": "Tell us about your website needs",
+        "back": "← Back to options",
         "name": "Name *",
         "email": "Email *",
+        "phone": "Phone Number (Optional)",
         "business": "Business Type",
         "message": "Project Details *",
-        "submit": "Get Free Consultation"
+        "submit": "Get Free Quote"
+      },
+      "success": {
+        "title": "Request Sent Successfully!",
+        "message": "Thank you for your inquiry. We'll review your project and send you a customized quote within 24 hours.",
+        "button": "Send Another Request"
       }
     },
     "faq": {
@@ -184,16 +236,68 @@
       }
     },
     "contact": {
-      "title": "Démarrez Votre Projet",
-      "getInTouch": "Entrer en Contact",
-      "description": "Prêt à établir votre présence en ligne ? Contactez-nous pour une consultation gratuite.",
-      "responseTime": "Réponse sous 24 heures",
+      "title": "Démarrez Votre Projet de Site Web",
+      "trust": {
+        "title": "Pourquoi les Entreprises Choisissent IzuTech",
+        "points": [
+          {
+            "icon": "🚀",
+            "title": "Lancement Rapide",
+            "text": "Site web prêt en 5-7 jours ouvrables",
+            "mobileText": "5-7 jours"
+          },
+          {
+            "icon": "💰",
+            "title": "Tarification Transparente",
+            "text": "Tarif tout compris à partir de 490€, sans surprises",
+            "mobileText": "Pas de frais cachés"
+          },
+          {
+            "icon": "💬",
+            "title": "Réponse sous 24h",
+            "text": "Nous vous répondons dans un jour ouvrable",
+            "mobileText": "Réponse rapide"
+          },
+          {
+            "icon": "📱",
+            "title": "Design Mobile-First",
+            "text": "Optimisé pour tous les appareils et tailles d'écran",
+            "mobileText": "Tous appareils"
+          }
+        ],
+        "guarantee": "Consultation Gratuite & Devis"
+      },
+      "options": {
+        "form": {
+          "title": "Envoyer les détails du projet",
+          "description": "Partagez vos besoins commerciaux et nous vous enverrons un devis personnalisé sous 24 heures",
+          "button": "Remplir le formulaire"
+        },
+        "call": {
+          "title": "Consultation rapide",
+          "description": "Appel gratuit de 15 minutes pour discuter de vos besoins et obtenir des réponses immédiates",
+          "button": "Réserver un appel"
+        },
+        "email": {
+          "title": "Email direct",
+          "description": "Vous préférez l'email ? Envoyez-nous vos exigences et nous répondrons rapidement.",
+          "button": "contact@izutech.fr"
+        }
+      },
       "form": {
+        "title": "Parlez-nous de vos besoins en site web",
+        "back": "← Retour aux options",
         "name": "Nom *",
         "email": "Email *",
-        "business": "Type d'Entreprise",
-        "message": "Détails du Projet *",
-        "submit": "Obtenir une Consultation Gratuite"
+        "phone": "Numéro de téléphone (Optionnel)",
+        "business": "Type d'entreprise",
+        "message": "Détails du projet *",
+        "submit": "Obtenir un Devis Gratuit"
+      },
+      "success": {
+        "title": "Demande Envoyée avec Succès !",
+        "message": "Merci pour votre demande. Nous examinerons votre projet et vous enverrons un devis personnalisé sous 24 heures.",
+        "button": "Envoyer une Autre Demande"
       }
     },
     "faq": {
