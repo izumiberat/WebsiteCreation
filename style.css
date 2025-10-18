@@ -501,6 +501,19 @@ h2 {
     margin-bottom: 1.5rem;
     flex-grow: 1;
 }
+.contact-option-card .btn-secondary {
+        display: inline-flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background: transparent;
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
+    }
+
+    .contact-option-card .btn-secondary:hover {
+        background: var(--primary-blue);
+        color: white;
+    }
 
 .option-actions {
     margin-top: auto;
