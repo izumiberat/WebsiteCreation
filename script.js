@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger?.classList.remove('active');
         navMenu?.classList.remove('active');
         hamburger?.setAttribute('aria-expanded', 'false');
+        document.activeElement?.blur(); // Added this line for better focus management
     }
     
     // Close mobile menu when clicking on a link
@@ -131,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateContent(loadedTranslations);
     }
 
-    // Language selector change event
+    // Language selector change event - UPDATED SECTION
     if (languageSelector) {
         languageSelector.addEventListener('change', async function(e) {
             currentLanguage = e.target.value;
@@ -139,6 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const loadedTranslations = await loadTranslations(currentLanguage);
             updateContent(loadedTranslations);
+            
+            // Close mobile menu after language change on mobile - ADDED THIS
+            if (window.innerWidth <= 768 && navMenu?.classList.contains('active')) {
+                closeMobileMenu();
+            }
         });
     }
 
