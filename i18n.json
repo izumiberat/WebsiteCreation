@@ -78,6 +78,33 @@
         "description": "We go live and provide training so you can manage your new site."
       }
     },
+    "portfolio": {
+      "title": "Our Recent Work",
+      "subtitle": "See how we've helped local businesses establish their online presence",
+      "visitSite": "Visit Site",
+      "project1": {
+        "title": "Coq Carlanais",
+        "category": "Traditional Restaurant",
+        "description": "A warm, authentic website for a traditional French restaurant featuring their menu, story, and reservation system."
+      },
+      "project2": {
+        "title": "André Motoculture",
+        "category": "Gardening Services",
+        "description": "A professional website for gardening equipment sales and services, showcasing their expertise and service areas."
+      },
+      "features": {
+        "responsive": "Mobile-First",
+        "seo": "SEO Optimized",
+        "booking": "Online Booking",
+        "contact": "Contact Forms"
+      },
+      "cta": {
+        "title": "Ready to Build Your Success Story?",
+        "subtitle": "Let's create a website that showcases your business and drives results",
+        "primary": "Start Your Project",
+        "secondary": "Book a Free Consultation"
+      }
+    },
     "contact": {
       "title": "Ready for Your New Website?",
       "trust": {
