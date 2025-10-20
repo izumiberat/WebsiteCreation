@@ -162,8 +162,18 @@
         "email": "Your Email *",
         "phone": "Phone Number (Optional)",
         "business": "Your Business Type",
+        "businessPlaceholder": "e.g., Restaurant, Salon, Local Shop",
         "message": "Your Project Details *",
+        "messagePlaceholder": "Tell us about your business, what you'd like to achieve with your website, and any specific features you need (online payments, booking, multilingual, etc.)",
         "submit": "Get My Free Quote"
+      },
+      "addonsGuidance": {
+        "title": "Popular add-ons to mention:",
+        "onlinePayments": "Online Payments",
+        "bookingSystem": "Booking System",
+        "multilingual": "Multilingual",
+        "professionalLogo": "Professional Logo",
+        "ongoingSupport": "Ongoing Support"
       },
       "success": {
         "title": "Thank You!",
@@ -361,8 +371,18 @@
         "email": "Email *",
         "phone": "Téléphone (Optionnel)",
         "business": "Votre secteur d'activité",
+        "businessPlaceholder": "ex: Restaurant, Salon, Commerce Local",
         "message": "Décrivez votre projet *",
+        "messagePlaceholder": "Parlez-nous de votre entreprise, de vos objectifs pour le site web, et de toute fonctionnalité spécifique dont vous avez besoin (paiements en ligne, réservation, multilingue, etc.)",
         "submit": "Obtenir Mon Devis Gratuit"
+      },
+      "addonsGuidance": {
+        "title": "Options populaires à mentionner :",
+        "onlinePayments": "Paiements en Ligne",
+        "bookingSystem": "Système de Réservation",
+        "multilingual": "Multilingue",
+        "professionalLogo": "Logo Professionnel",
+        "ongoingSupport": "Support Continu"
       },
       "success": {
         "title": "Merci pour votre demande !",
