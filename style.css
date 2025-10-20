@@ -22,7 +22,7 @@
 }
 
 /* ===== Reset & Base Styles ===== */
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -123,7 +123,7 @@ h2 {
     color: var(--primary-blue);
 }
 
-.nav-link:after {
+.nav-link::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -134,7 +134,7 @@ h2 {
     transition: var(--transition);
 }
 
-.nav-link:hover:after {
+.nav-link:hover::after {
     width: 100%;
 }
 
@@ -186,7 +186,7 @@ h2 {
     overflow: hidden;
 }
 
-.hero:before {
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -389,7 +389,7 @@ h2 {
     padding-left: 1.5rem;
 }
 
-.features-list li:before {
+.features-list li::before {
     content: "✓";
     position: absolute;
     left: 0;
@@ -607,31 +607,7 @@ h2 {
     font-size: 1.1rem;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .portfolio-card {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    
-    .portfolio-content {
-        padding: 1.5rem;
-    }
-    
-    .portfolio-cta {
-        padding: 2rem 1.5rem;
-    }
-    
-    .portfolio-cta h3 {
-        font-size: 1.5rem;
-    }
-}
-/* ===== Updated Contact Section ===== */
+/* ===== Contact Section ===== */
 .contact {
     padding: var(--section-padding);
     background: var(--light-surface);
@@ -683,12 +659,13 @@ h2 {
     margin-bottom: 1.5rem;
     flex-grow: 1;
 }
+
 .contact-option-card .btn-secondary {
     background: var(--primary-blue) !important;
     color: white !important;
     border: 2px solid var(--primary-blue) !important;
 }
-    
+
 .contact-option-card .btn-secondary:hover {
     background: var(--primary-dark) !important;
     border-color: var(--primary-dark) !important;
@@ -998,44 +975,6 @@ h2 {
     margin: 0;
 }
 
-/* Desktop Layout */
-@media (min-width: 769px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .contact-options {
-        display: none;
-    }
-    
-    .contact-form-and-trust {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: start;
-    }
-    
-    .contact-form-container {
-        display: block !important;
-    }
-    
-    .back-to-options {
-        display: none !important;
-    }
-    
-    .trust-section-mobile {
-        display: none !important;
-    }
-    
-    .trust-section {
-        position: sticky;
-        top: 100px;
-    }
-}
-
 /* ===== FAQ Section ===== */
 .faq {
     padding: var(--section-padding);
@@ -1072,51 +1011,6 @@ h2 {
 .footer {
     background: var(--primary-dark);
     color: white;
-    padding: 4rem 0 3rem;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.footer-logo img {
-    height: 100px;
-    width: auto;
-    opacity: 0.9;
-    transition: var(--transition);
-}
-
-.footer-logo:hover img {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.footer p {
-    margin: 0;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 500px;
-}
-
-.footer a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer a:hover {
-    color: white;
-}
-
-
-.footer {
-    background: var(--primary-dark);
-    color: white;
     position: relative;
 }
 
@@ -1133,7 +1027,6 @@ h2 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 2.5rem;
-    font-family: var(--font-primary);
 }
 
 .businesses-grid {
@@ -1192,7 +1085,6 @@ h2 {
     font-size: 0.9rem;
     transition: var(--transition);
     display: inline-block;
-    cursor: pointer;
 }
 
 .business-link:hover {
@@ -1253,13 +1145,51 @@ h2 {
     margin: 0 auto;
 }
 
+/* ===== Desktop Layout ===== */
+@media (min-width: 769px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .contact-options {
+        display: none;
+    }
+    
+    .contact-form-and-trust {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+    
+    .contact-form-container {
+        display: block !important;
+    }
+    
+    .back-to-options {
+        display: none !important;
+    }
+    
+    .trust-section-mobile {
+        display: none !important;
+    }
+    
+    .trust-section {
+        position: sticky;
+        top: 100px;
+    }
+}
+
 /* ===== Mobile Responsive Design ===== */
 @media (max-width: 768px) {
     .container {
         padding: 0 1.25rem;
     }
     
-    /* Navigation fixes */
+    /* Navigation */
     .hamburger {
         display: flex;
     }
@@ -1296,7 +1226,7 @@ h2 {
         padding: 120px 0 80px;
     }
     
-    /* Button fixes */
+    /* Buttons */
     .cta-container {
         flex-direction: column;
         align-items: center;
@@ -1307,7 +1237,7 @@ h2 {
         max-width: 280px;
     }
     
-    /* Grid centering fixes */
+    /* Grid layouts */
     .services-grid,
     .pricing-grid,
     .process-steps,
@@ -1320,22 +1250,34 @@ h2 {
         transform: none;
     }
     
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .portfolio-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .portfolio-content {
+        padding: 1.5rem;
+    }
+    
+    .portfolio-cta {
+        padding: 2rem 1.5rem;
+    }
+    
+    .portfolio-cta h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Contact Section */
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
-    /* Card centering */
-    .service-card,
-    .pricing-card,
-    .step,
-    .faq-item {
-        margin: 0 auto;
-        max-width: 400px;
-        width: 100%;
-    }
-    
-    /* Updated Mobile Contact Section */
     .contact-options {
         display: grid !important;
         grid-template-columns: 1fr;
@@ -1381,14 +1323,7 @@ h2 {
         display: none !important;
     }
     
-    /* Footer fixes */
-    .footer-logo img {
-        height: 80px;
-    }
-    
-    .footer {
-        padding: 3rem 0 2rem;
-    }
+    /* Footer */
     .footer-businesses {
         padding: 2rem 0;
     }
@@ -1435,10 +1370,6 @@ h2 {
     .pricing-card,
     .faq-item {
         padding: 1.5rem;
-    }
-    
-    .footer-logo img {
-        height: 60px;
     }
 }
 
