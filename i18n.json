@@ -180,8 +180,8 @@
         "description": "Votre site s'affiche instantanément et s'adapte parfaitement à tous les écrans."
       },
       "feature2": {
-        "title": "Optimisé pour le SEO",
-        "description": "Votre site est conçu pour être bien référencé sur Google et les recherches locales dès le départ."
+        "title": "SEO Intégré",
+        "description": "Votre site est conçu pour être bien référencé sur Google et les recherches locales dès le départ, avec une optimisation on-page complète."
       },
       "feature3": {
         "title": "Design Sur Mesure",
@@ -201,9 +201,9 @@
         "features": [
           "Jusqu'à 5 pages (ou sections pour un site one-page)",
           "Design 100% adaptable (mobile-first)",
-          "Optimisation SEO de base incluse",
+          "Fondation SEO complète avec optimisation on-page",
           "Formulaire de contact fonctionnel",
-          "Hébergement sécurisé inclus*",
+          "Hébergement sécurisé inclus",
           "Formation à la gestion de base"
         ]
       },
