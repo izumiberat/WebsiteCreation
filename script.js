@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ogTitle) ogTitle.setAttribute('content', translations.meta.title);
         if (ogDescription) ogDescription.setAttribute('content', translations.meta.description);
         
-        // Update all elements with data-i18n attribute
+        // Update all elements with data-i18n attribute - FIXED LOGIC
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             const value = getNestedValue(translations, key);
@@ -97,10 +97,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     element.setAttribute('placeholder', value);
                 } else if (element.tagName === 'IMG' && element.hasAttribute('alt')) {
                     element.setAttribute('alt', value);
-                } else if (element.hasAttribute('aria-label')) {
+                } else if (element.hasAttribute('aria-label') && element.tagName !== 'A' && element.tagName !== 'BUTTON') {
+                    // Only update aria-label for non-interactive elements
                     element.setAttribute('aria-label', value);
                 } else {
+                    // For links and buttons, always update text content
                     element.textContent = value;
+                    // Also update aria-label if it exists for accessibility
+                    if (element.hasAttribute('aria-label')) {
+                        element.setAttribute('aria-label', value);
+                    }
                 }
             }
         });
