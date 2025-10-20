@@ -262,6 +262,33 @@
         "description": "Votre site est lancé et nous vous formons pour l'utiliser."
       }
     },
+    "portfolio": {
+      "title": "Nos Réalisations Récentes",
+      "subtitle": "Découvrez comment nous aidons les entreprises locales à établir leur présence en ligne",
+      "visitSite": "Voir le Site",
+      "project1": {
+        "title": "Coq Carlanais",
+        "category": "Restaurant Traditionnel",
+        "description": "Un site web chaleureux et authentique pour un restaurant français traditionnel, présentant son menu, son histoire et son système de réservation."
+      },
+      "project2": {
+        "title": "André Motoculture",
+        "category": "Services de Jardinage",
+        "description": "Un site web professionnel pour la vente d'équipements et services de jardinage, mettant en valeur leur expertise et zones d'intervention."
+      },
+      "features": {
+        "responsive": "Mobile-First",
+        "seo": "SEO Optimisé",
+        "booking": "Réservation en Ligne",
+        "contact": "Formulaires de Contact"
+      },
+      "cta": {
+        "title": "Prêt à Écrire Votre Success Story ?",
+        "subtitle": "Créons ensemble un site web qui met en valeur votre entreprise et génère des résultats",
+        "primary": "Démarrer Mon Projet",
+        "secondary": "Consultation Gratuite"
+      }
+    },
     "contact": {
       "title": "Lançons Votre Projet Ensemble",
       "trust": {
