@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger?.classList.remove('active');
         navMenu?.classList.remove('active');
         hamburger?.setAttribute('aria-expanded', 'false');
-        document.activeElement?.blur(); // Added this line for better focus management
+        document.activeElement?.blur();
     }
     
     // Close mobile menu when clicking on a link
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateContent(loadedTranslations);
     }
 
-    // Language selector change event - UPDATED SECTION
+    // Language selector change event
     if (languageSelector) {
         languageSelector.addEventListener('change', async function(e) {
             currentLanguage = e.target.value;
@@ -151,11 +151,55 @@ document.addEventListener('DOMContentLoaded', function() {
             const loadedTranslations = await loadTranslations(currentLanguage);
             updateContent(loadedTranslations);
             
-            // Close mobile menu after language change on mobile - ADDED THIS
+            // Update hreflang tags dynamically
+            updateHreflangTags(currentLanguage);
+            
+            // Close mobile menu after language change on mobile
             if (window.innerWidth <= 768 && navMenu?.classList.contains('active')) {
                 closeMobileMenu();
             }
         });
+    }
+
+    // Update hreflang tags dynamically
+    function updateHreflangTags(lang) {
+        const baseUrl = window.location.origin + window.location.pathname;
+        const alternateLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
+        
+        alternateLinks.forEach(link => {
+            const hreflang = link.getAttribute('hreflang');
+            if (hreflang === lang || hreflang === 'x-default') {
+                link.setAttribute('href', `${baseUrl}?lang=${lang}`);
+            }
+        });
+    }
+
+    // Lazy load images
+    function initLazyLoading() {
+        const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+        
+        if ('IntersectionObserver' in window) {
+            const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                        lazyImage.classList.add('loaded');
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+
+            lazyImages.forEach(function(lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // Fallback for browsers without IntersectionObserver
+            lazyImages.forEach(function(lazyImage) {
+                lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                lazyImage.classList.add('loaded');
+            });
+        }
     }
 
     // Mobile contact section interactions
@@ -170,6 +214,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (window.innerWidth <= 768) {
                     contactOptions.style.display = 'none';
                     contactFormAndTrust.classList.add('active');
+                    // Update ARIA attributes
+                    showFormBtn.setAttribute('aria-expanded', 'true');
                     // Smooth scroll to form
                     contactFormAndTrust.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }
@@ -181,6 +227,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (window.innerWidth <= 768) {
                     contactFormAndTrust.classList.remove('active');
                     contactOptions.style.display = 'grid';
+                    // Update ARIA attributes
+                    const showFormBtn = document.querySelector('.show-form-btn');
+                    if (showFormBtn) showFormBtn.setAttribute('aria-expanded', 'false');
                     // Smooth scroll back to options
                     contactOptions.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }
@@ -272,6 +321,22 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Smooth scroll to success message
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Update ARIA live region for screen readers
+            const successTitle = successMessage.querySelector('h3');
+            if (successTitle) {
+                const liveRegion = document.createElement('div');
+                liveRegion.setAttribute('aria-live', 'polite');
+                liveRegion.setAttribute('aria-atomic', 'true');
+                liveRegion.style.cssText = 'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
+                liveRegion.textContent = successTitle.textContent + ' ' + successMessage.querySelector('p').textContent;
+                document.body.appendChild(liveRegion);
+                
+                // Clean up after a delay
+                setTimeout(() => {
+                    document.body.removeChild(liveRegion);
+                }, 5000);
+            }
         }
     }
 
@@ -284,6 +349,11 @@ document.addEventListener('DOMContentLoaded', function() {
         errorElement.style.cssText = 'color: #E74C3C; font-size: 0.875rem; margin-top: 0.25rem;';
         errorElement.textContent = message;
         field.parentNode.appendChild(errorElement);
+        
+        // Focus the first error field
+        if (!document.querySelector('.error:focus')) {
+            field.focus();
+        }
     }
 
     function isValidEmail(email) {
@@ -310,6 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize the page
     initLanguage();
+    initLazyLoading();
     initContactSection();
     initContactForm();
 
@@ -331,6 +402,10 @@ window.resetForm = function() {
         
         // Reset form fields
         form.reset();
+        
+        // Clear any error messages
+        form.querySelectorAll('.error-message').forEach(msg => msg.remove());
+        form.querySelectorAll('.error').forEach(field => field.classList.remove('error'));
         
         // Scroll to form
         form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
