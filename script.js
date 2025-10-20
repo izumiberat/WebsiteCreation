@@ -105,6 +105,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Update elements with data-i18n-placeholder attribute
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            const value = getNestedValue(translations, key);
+            
+            if (value !== undefined && value !== null) {
+                element.setAttribute('placeholder', value);
+            }
+        });
+
         // Update HTML lang attribute
         document.documentElement.setAttribute('lang', currentLanguage);
         
