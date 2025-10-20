@@ -2,7 +2,12 @@
   "en": {
     "meta": {
       "title": "IzuTech - Fast, Affordable Websites for Local Businesses",
-      "description": "Get a professional, SEO-optimized static website for your business. Transparent pricing from €490. Includes mobile design, hosting, and maintenance."
+      "description": "Professional SEO-optimized websites with transparent pricing from €490. Mobile-friendly design, hosting, and maintenance included for French businesses.",
+      "keywords": "website development, static website, business website, SEO optimization, French businesses, affordable website"
+    },
+    "og": {
+      "title": "IzuTech - Fast, Affordable Websites for Local Businesses",
+      "description": "Professional SEO-optimized websites with transparent pricing from €490. Mobile design, hosting, and maintenance included."
     },
     "nav": {
       "services": "What's Included",
@@ -211,7 +216,12 @@
   "fr": {
     "meta": {
       "title": "IzuTech - Création de Sites Web Statiques pour les Professionnels et TPE",
-      "description": "Sites vitrines professionnels pour les entreprises françaises. Tarif transparent dès 490 €. Sites web rapides, optimisés SEO et adaptés mobile, incluant la maintenance."
+      "description": "Sites vitrines professionnels pour les entreprises françaises. Tarif transparent dès 490 €. Sites web rapides, optimisés SEO et adaptés mobile, incluant la maintenance.",
+      "keywords": "création site web, site vitrine, site entreprise, optimisation SEO, entreprises françaises, site web abordable"
+    },
+    "og": {
+      "title": "IzuTech - Sites Web Professionnels et Abordables pour TPE",
+      "description": "Sites web optimisés SEO avec tarification transparente dès 490 €. Design mobile, hébergement et maintenance inclus."
     },
     "nav": {
       "services": "Nos Prestations",
