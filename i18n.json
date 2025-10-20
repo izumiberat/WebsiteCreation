@@ -1,156 +1,156 @@
 {
   "en": {
     "meta": {
-      "title": "IzuTech - Professional Static Websites for Local Businesses",
-      "description": "Professional static websites for French businesses. Transparent pricing from €490. SEO optimized, mobile-friendly websites with ongoing maintenance."
+      "title": "IzuTech - Fast, Affordable Websites for Local Businesses",
+      "description": "Get a professional, SEO-optimized static website for your business. Transparent pricing from €490. Includes mobile design, hosting, and maintenance."
     },
     "nav": {
-      "services": "Services",
+      "services": "What's Included",
       "pricing": "Pricing",
-      "process": "Process",
-      "contact": "Contact"
+      "process": "Our Process",
+      "contact": "Get Started"
     },
     "hero": {
-      "title": "Professional Websites for Local Businesses",
-      "subtitle": "Beautiful, fast, and SEO-optimized static websites that help customers find your business online. Transparent pricing from €490.",
-      "cta": "Free consultation",
-      "secondary": "See Pricing"
+      "title": "A Website That Works as Hard as You Do",
+      "subtitle": "Get a beautiful, fast, and SEO-optimized website designed to attract new customers. All for a simple, one-time fee from €490.",
+      "cta": "Get Your Free Quote",
+      "secondary": "See Plans & Pricing"
     },
     "services": {
-      "title": "What's Included in Every Website",
+      "title": "Everything You Need to Get Online",
       "feature1": {
-        "title": "Fast & Mobile-Friendly",
-        "description": "Optimized for all devices with lightning-fast loading speeds."
+        "title": "Blazing Fast & Mobile-Ready",
+        "description": "Lightning-fast loading speeds and a flawless experience on any device."
       },
       "feature2": {
-        "title": "SEO Optimized",
-        "description": "Comprehensive SEO foundation with on-page optimization and local search setup."
+        "title": "Built-In SEO",
+        "description": "Get found on Google from day one with our comprehensive on-page and local SEO setup."
       },
       "feature3": {
-        "title": "Professional Design",
-        "description": "Custom, modern design that reflects your brand identity."
+        "title": "Professional, Custom Design",
+        "description": "A unique, modern website that builds trust and reflects your brand's quality."
       },
       "feature4": {
-        "title": "Contact Forms",
-        "description": "Working contact forms that deliver messages directly to your email."
+        "title": "Direct Lead Capture",
+        "description": "Working contact forms that deliver customer inquiries straight to your inbox."
       }
     },
     "pricing": {
-      "title": "Transparent Pricing",
+      "title": "Simple, All-Inclusive Pricing",
       "mostPopular": "Most Popular",
       "basic": {
-        "title": "Basic Website Package",
-        "description": "One-time fee",
+        "title": "Essential Website",
+        "description": "One-time fee. No hidden costs.",
         "features": [
-          "Up to 5 pages (or 5 sections for single-page sites)",
-          "Mobile-responsive design",
-          "Comprehensive SEO foundation",
-          "Contact form",
-          "Hosting on github.io",
-          "Basic training"
+          "Up to 5 pages (or sections for one-page sites)",
+          "100% Mobile-Responsive Design",
+          "Complete On-Page SEO Foundation",
+          "Integrated Contact Form",
+          "Secure Hosting Included",
+          "Basic Handover Training"
         ]
       },
       "addons": {
-        "title": "Popular Add-ons",
-        "multilingual": "Multilingual (Bilingual)",
-        "payment": "Online Payments",
-        "logo": "Professional Logo",
-        "maintenance": "Ongoing Support"
+        "title": "Enhance Your Site",
+        "multilingual": "Multilingual (Bilingual) Version",
+        "payment": "Online Payment System",
+        "logo": "Professional Logo Design",
+        "maintenance": "Ongoing Care & Support"
       },
-      "cta": "Get Started"
+      "cta": "Start Your Project"
     },
     "process": {
-      "title": "Simple 4-Step Process",
+      "title": "Get Online in 4 Simple Steps",
       "step1": {
-        "title": "Consultation",
-        "description": "We discuss your business needs and requirements."
+        "title": "Discovery & Plan",
+        "description": "We hop on a call to understand your business and goals."
       },
       "step2": {
-        "title": "Design & Development",
-        "description": "Your website is built within 5-7 business days."
+        "title": "Design & Build",
+        "description": "Your website is crafted and developed within 5-7 business days."
       },
       "step3": {
-        "title": "Review & Feedback",
-        "description": "You review the website and request changes."
+        "title": "Review & Revise",
+        "description": "You preview the site and we refine it based on your feedback."
       },
       "step4": {
-        "title": "Launch & Training",
-        "description": "Your website goes live with basic training provided."
+        "title": "Launch & Support",
+        "description": "We go live and provide training so you can manage your new site."
       }
     },
     "contact": {
-      "title": "Start Your Website Project",
+      "title": "Ready for Your New Website?",
       "trust": {
-        "title": "Why Businesses Choose IzuTech",
+        "title": "Why 100+ Businesses Chose IzuTech",
         "points": [
           {
             "icon": "🚀",
-            "title": "Quick Launch",
-            "text": "Website ready in 5-7 business days",
-            "mobileText": "5-7 days"
+            "title": "Fast Turnaround",
+            "text": "Your website ready to go in 5-7 business days",
+            "mobileText": "5-7 Day Launch"
           },
           {
             "icon": "💰",
-            "title": "Transparent Pricing",
-            "text": "All-inclusive pricing from €490, no surprises",
-            "mobileText": "No hidden fees"
+            "title": "No Surprise Fees",
+            "text": "One transparent, all-inclusive price from €490",
+            "mobileText": "All-Inclusive Price"
           },
           {
             "icon": "💬",
-            "title": "24h Response Time",
-            "text": "We get back to you within one business day",
-            "mobileText": "Fast reply"
+            "title": "Quick Response Guarantee",
+            "text": "We answer all inquiries within one business day",
+            "mobileText": "24h Response"
           },
           {
             "icon": "📱",
-            "title": "Mobile-First Design",
-            "text": "Optimized for all devices and screen sizes",
-            "mobileText": "All devices"
+            "title": "Mobile-First Expert",
+            "text": "Websites designed for the way people browse today",
+            "mobileText": "Mobile-First"
           }
         ],
-        "guarantee": "Free Consultation & Quote"
+        "guarantee": "Free Consultation & Fixed-Price Quote"
       },
       "options": {
         "form": {
-          "title": "Send project details",
-          "description": "Share your business needs and we'll provide a customized quote within 24 hours",
-          "button": "Fill out form"
+          "title": "Get a detailed quote",
+          "description": "Share your project details and we'll send you a personalized quote within 24 hours.",
+          "button": "Request Your Quote"
         },
         "call": {
-          "title": "Quick consultation",
-          "description": "15-minute free call to discuss your website needs and get immediate answers",
-          "button": "Book a call"
+          "title": "Quick 15-min call",
+          "description": "A free, no-obligation call to discuss your needs and get immediate answers.",
+          "button": "Schedule a Call"
         },
         "email": {
-          "title": "Email directly",
-          "description": "Prefer email? Send us your requirements and we'll respond quickly.",
+          "title": "Send us an email",
+          "description": "Prefer email? Send us your requirements and we'll get back to you promptly.",
           "button": "contact@izutech.fr"
         }
       },
       "form": {
-        "title": "Tell us about your website needs",
-        "back": "← Back to options",
-        "name": "Name *",
-        "email": "Email *",
+        "title": "Tell Us About Your Project",
+        "back": "← Back to contact options",
+        "name": "Your Name *",
+        "email": "Your Email *",
         "phone": "Phone Number (Optional)",
-        "business": "Business Type",
-        "message": "Project Details *",
-        "submit": "Get Free Quote"
+        "business": "Your Business Type",
+        "message": "Your Project Details *",
+        "submit": "Get My Free Quote"
       },
       "success": {
-        "title": "Request Sent Successfully!",
-        "message": "Thank you for your inquiry. We'll review your project and send you a customized quote within 24 hours.",
-        "button": "Send Another Request"
+        "title": "Thank You!",
+        "message": "We've received your request. We're reviewing it and will send your personalized quote within 24 hours.",
+        "button": "Submit Another Request"
       }
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "q1": "How long does it take to build a website?",
-      "a1": "Most websites are completed within 5-7 business days after we receive all necessary information.",
-      "q2": "Do you provide ongoing support?",
-      "a2": "Yes, we offer optional monthly maintenance packages for updates and technical support.",
-      "q3": "Can I update the website myself?",
-      "a3": "We provide basic training, but for frequent updates, we recommend our maintenance package."
+      "q1": "How long until my website is live?",
+      "a1": "Most of our websites are completed and launched within 5-7 business days after the project kick-off.",
+      "q2": "What about updates and support after launch?",
+      "a2": "Yes, we offer optional monthly care plans for content updates, technical support, and peace of mind.",
+      "q3": "Can I edit the website myself?",
+      "a3": "We provide training for basic text and image updates. For more complex changes, our care plan saves you time and ensures it's done right."
     },
     "footer": {
       "copyright": "© 2025 IzuTech. All rights reserved."
