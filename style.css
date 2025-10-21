@@ -244,14 +244,15 @@ h2 {
 }
 
 .btn-secondary {
-    background: var(--gradient-primary);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    box-shadow: var(--shadow-md);
+    border-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
 }
 
 .btn-card {
@@ -611,6 +612,22 @@ h2 {
     margin-bottom: 2rem;
     font-size: 1.1rem;
 }
+
+/* Portfolio CTA button override */
+.portfolio-cta .btn-secondary {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: transparent;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: none;
+}
+
+.portfolio-cta .btn-secondary:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 
 /* ===== Contact Section ===== */
 .contact {
