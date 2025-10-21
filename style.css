@@ -244,15 +244,14 @@ h2 {
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--gradient-primary);
     color: white;
-    border-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-card {
@@ -489,7 +488,7 @@ h2 {
 
 .portfolio-image {
     position: relative;
-    height: 400px; /* Reduced height for better logo display */
+    height: 300px; /* Reduced height for better logo display */
     overflow: hidden;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     display: flex;
