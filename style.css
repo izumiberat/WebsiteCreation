@@ -489,7 +489,7 @@ h2 {
 
 .portfolio-image {
     position: relative;
-    height: 200px; /* Reduced height for better logo display */
+    height: 300px; /* Reduced height for better logo display */
     overflow: hidden;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     display: flex;
