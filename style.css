@@ -489,7 +489,7 @@ h2 {
 
 .portfolio-image {
     position: relative;
-    height: 300px; /* Reduced height for better logo display */
+    height: 400px; /* Reduced height for better logo display */
     overflow: hidden;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     display: flex;
@@ -499,11 +499,11 @@ h2 {
 }
 
 .portfolio-image img {
-    max-width: 80%; /* Limit maximum width */
-    max-height: 80%; /* Limit maximum height */
+    max-width: 90%; /* Limit maximum width */
+    max-height: 90%; /* Limit maximum height */
     width: auto;
     height: auto;
-    object-fit: contain; /* Changed from cover to contain */
+    object-fit: contain;
     transition: var(--transition);
 }
 
@@ -1272,8 +1272,8 @@ h2 {
     }
     
     .portfolio-image img {
-        max-width: 85%;
-        max-height: 85%;
+        max-width: 95%;
+        max-height: 95%;
     }
     
     .portfolio-content {
