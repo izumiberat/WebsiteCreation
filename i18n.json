@@ -97,12 +97,19 @@
         "category": "Gardening Repair Services",
         "description": "A professional website for gardening repair services, showcasing their expertise, service areas, and contact information."
       },
+      "project3": {
+        "title": "APE François-Verdier",
+        "category": "Parents Association",
+        "description": "A comprehensive website for a middle school parents' association featuring event management, winter ball registrations, resources for parents, and communication tools."
+      },
       "features": {
         "responsive": "Mobile-First",
         "seo": "SEO Optimized",
         "forms": "Contact Forms",
         "events": "Event Management",
-        "quote": "Quote Requests"
+        "quote": "Quote Requests",
+        "registration": "Registration Systems",
+        "resources": "Resource Portal"
       },
       "cta": {
         "title": "Ready to Build Your Success Story?",
@@ -311,12 +318,19 @@
         "category": "Services de Réparation de Matériels de Jardinage",
         "description": "Un site web professionnel pour la réparation de matériels de jardinage, mettant en valeur leur expertise, zones d'intervention et informations de contact."
       },
+      "project3": {
+        "title": "APE François-Verdier",
+        "category": "Association de Parents d'Élèves",
+        "description": "Un site web complet pour une association de parents d'élèves de collège, avec gestion d'événements, inscriptions au bal d'hiver, ressources pour les parents et outils de communication."
+      },
       "features": {
         "responsive": "Mobile-First",
         "seo": "SEO Optimisé",
         "forms": "Formulaires de Contact",
         "events": "Gestion d'Événements",
-        "quote": "Demandes de Devis"
+        "quote": "Demandes de Devis",
+        "registration": "Systèmes d'Inscription",
+        "resources": "Portail de Ressources"
       },
       "cta": {
         "title": "Prêt à Écrire Votre Success Story ?",
