@@ -68,6 +68,7 @@
     "about.photoAlt": "Portrait of Izumi Bérat",
     "about.p1": "I’m Izumi Bérat, an engineer. I spent many years in IT and the web, including as Director for Web Initiatives at Columbia University in New York.",
     "about.p2": "Today I build websites for small organisations around me. You deal with one person, from the first call to launch, and I answer you directly.",
+    "about.p3": "Away from the screen, I practise yoga, meditation and running every day. That’s also why I like simple websites: you update them in a few minutes, then get back to your work.",
     "about.more": "I also help small businesses automate repetitive work with AI: <a href=\"https://izutech.fr/\">izutech.fr</a>",
 
     "faq.title": "Questions",
