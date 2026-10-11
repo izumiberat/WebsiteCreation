@@ -12,7 +12,7 @@
     "nav.faq": "Questions",
     "nav.cta": "Get a quote",
 
-    "hero.kicker": "Websites for tradespeople, shops and associations. Ariège, Pau and remote.",
+    "hero.kicker": "Websites for tradespeople, shops and associations. Based in Pau, on site or remote.",
     "hero.title": "A clear website, online in a week.",
     "hero.lead": "Your customers look you up on their phone. I build a simple, fast website that shows what you do, where to find you and how to reach you. Fixed price of €490, no compulsory subscription.",
     "hero.cta": "Get a free quote",
@@ -109,7 +109,7 @@
     "footer.legal": "Legal notice and privacy (in French)",
 
     "meta.title": "IzuTech · Websites for tradespeople, shops and associations",
-    "meta.description": "A clear, fast website that works on phones. Fixed price of €490, online in 5 to 7 working days. Ariège, Pau and across France."
+    "meta.description": "A clear, fast website that works on phones. Fixed price of €490, online in 5 to 7 working days. Based in Pau, working across France."
   };
 
   var FR_EXTRA = {
