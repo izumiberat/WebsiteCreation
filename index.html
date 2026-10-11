@@ -1,666 +1,260 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:og="http://ogp.me/ns#">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>IzuTech - Fast, Affordable Websites for Local Businesses</title>
-    <meta name="description" content="Professional SEO-optimized websites with transparent pricing from €490. Mobile-friendly design, hosting, and maintenance included for French businesses.">
-    <meta name="keywords" content="website development, static website, business website, SEO optimization, French businesses, affordable website">
-    <meta name="author" content="IzuTech">
-    <meta name="robots" content="index, follow, max-snippet:150, max-image-preview:large">
-    
-    <!-- Multilingual SEO & Canonical -->
-    <link rel="alternate" hreflang="en" href="https://web.izutech.fr" />
-    <link rel="alternate" hreflang="fr" href="https://web.izutech.fr?lang=fr" />
-    <link rel="alternate" hreflang="x-default" href="https://web.izutech.fr" />
-    <link rel="canonical" href="https://web.izutech.fr" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="IzuTech - Fast, Affordable Websites for Local Businesses">
-    <meta property="og:description" content="Professional SEO-optimized websites with transparent pricing from €490. Mobile design, hosting, and maintenance included.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://web.izutech.fr">
-    <meta property="og:image" content="https://web.izutech.fr/photo/IzuTech-logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="IzuTech">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IzuTech - Fast, Affordable Websites for Local Businesses">
-    <meta name="twitter:description" content="Professional static websites with SEO optimization. Transparent pricing from €490.">
-    <meta name="twitter:image" content="https://web.izutech.fr/photo/IzuTech-logo.png">
-    
-    <!-- Preload & Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"></noscript>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="photo/IzuTech-logo.png">
-    <link rel="apple-touch-icon" href="photo/IzuTech-logo.png">
-    <link rel="icon" type="image/x-icon" href="photo/IzuTech-logo.ico">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "IzuTech",
-        "description": "Professional website development services for local businesses",
-        "url": "https://web.izutech.fr",
-        "logo": "https://web.izutech.fr/photo/IzuTech-logo.png",
-        "telephone": "+33-XXXXXXXXX",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "FR"
-        },
-        "areaServed": "FR",
-        "serviceType": "Website Development",
-        "priceRange": "€€",
-        "offers": {
-            "@type": "Offer",
-            "description": "Essential Website Package",
-            "price": "490",
-            "priceCurrency": "EUR"
-        }
-    }
-    </script>
-
-    <!-- CSS with Preload -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
-    
-    <!-- Inline Critical CSS -->
-    <style>
-        /* Critical above-the-fold styles */
-        .navbar { 
-            position: fixed; 
-            top: 0; 
-            width: 100%; 
-            background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(10px); 
-            z-index: 1000; 
-            border-bottom: 1px solid #E6EBF0;
-        }
-        .nav-container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 0 1.5rem; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            height: 80px; 
-        }
-        .hero { 
-            padding: 140px 0 100px; 
-            background: linear-gradient(135deg, #0A2540 0%, #1A365D 100%); 
-            color: white; 
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>') no-repeat bottom right;
-        }
-        .hero-content { 
-            position: relative; 
-            z-index: 1; 
-            text-align: center;
-        }
-        .hero-title { 
-            color: white; 
-            margin-bottom: 1.5rem; 
-            font-size: clamp(2.5rem, 5vw, 3.75rem);
-            font-weight: 600;
-            line-height: 1.2;
-        }
-        .hero-subtitle { 
-            font-size: 1.375rem; 
-            color: rgba(255, 255, 255, 0.85); 
-            max-width: 600px; 
-            margin: 0 auto 3rem; 
-            line-height: 1.6; 
-        }
-        .cta-container { 
-            display: flex; 
-            gap: 1rem; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-        }
-        .btn { 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 12px 32px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 1rem; 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            border: 2px solid transparent; 
-            cursor: pointer; 
-            text-align: center; 
-            gap: 8px; 
-            line-height: 1.4; 
-        }
-        .btn-primary { 
-            background: linear-gradient(135deg, #0066FF 0%, #635BFF 100%); 
-            color: white; 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); 
-        }
-        .btn-secondary { 
-            background: rgba(255, 255, 255, 0.1); 
-            color: white; 
-            border-color: rgba(255, 255, 255, 0.3); 
-            backdrop-filter: blur(10px); 
-        }
-        
-        /* Lazy loading styles */
-        img[loading="lazy"] {
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        img[loading="lazy"].loaded {
-            opacity: 1;
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IzuTech · Sites web pour artisans, commerces et associations</title>
+<meta name="description" content="Un site web clair, rapide et lisible sur téléphone pour votre activité. Prix fixe de 490 €, en ligne en 5 à 7 jours ouvrés. Ariège, Pau et partout en France.">
+<meta name="author" content="IzuTech">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://web.izutech.fr/">
+<link rel="alternate" hreflang="fr" href="https://web.izutech.fr/">
+<link rel="alternate" hreflang="en" href="https://web.izutech.fr/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://web.izutech.fr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IzuTech">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://web.izutech.fr/">
+<meta property="og:title" content="IzuTech · Un site web clair, en ligne en une semaine">
+<meta property="og:description" content="Sites web pour artisans, commerces et associations. Prix fixe de 490 €.">
+<meta property="og:image" content="https://web.izutech.fr/photo/IzuTech-logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="photo/IzuTech-logo.ico">
+<link rel="apple-touch-icon" href="photo/IzuTech-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "IzuTech · Sites web",
+  "url": "https://web.izutech.fr/",
+  "logo": "https://web.izutech.fr/photo/IzuTech-logo.png",
+  "email": "contact@izutech.fr",
+  "founder": {"@type": "Person", "name": "Izumi Bérat"},
+  "areaServed": ["Ariège", "Pau", "France"],
+  "address": {"@type": "PostalAddress", "addressLocality": "Pau", "addressCountry": "FR"},
+  "makesOffer": [
+    {"@type": "Offer", "name": "Site essentiel", "price": 490, "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Suivi et mises à jour", "price": 30, "priceCurrency": "EUR"}
+  ]
+}
+</script>
 </head>
-<body itemscope itemtype="https://schema.org/WebPage">
-    <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="#" class="nav-logo" aria-label="IzuTech homepage">
-                <img src="photo/IzuTech-logo.png" alt="IzuTech Web Services - Professional Website Development" width="160" height="40" loading="eager" itemprop="logo">
-            </a>
-            <ul class="nav-menu" role="menubar">
-                <li class="nav-item" role="none"><a href="#services" class="nav-link" role="menuitem" data-i18n="nav.services">What's Included</a></li>
-                <li class="nav-item" role="none"><a href="#pricing" class="nav-link" role="menuitem" data-i18n="nav.pricing">Pricing</a></li>
-                <li class="nav-item" role="none"><a href="#process" class="nav-link" role="menuitem" data-i18n="nav.process">Our Process</a></li>
-                <li class="nav-item" role="none"><a href="#contact" class="nav-link" role="menuitem" data-i18n="nav.contact">Get Started</a></li>
-                <li class="nav-item" role="none">
-                    <select id="language-selector" class="language-selector" aria-label="Select language">
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                    </select>
-                </li>
-            </ul>
-            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="IzuTech, accueil">
+      <img src="photo/IzuTech-logo.png" alt="" width="40" height="40">
+      <span>IzuTech</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale" data-i18n-aria="navLabel">
+      <a href="#offre" data-i18n="nav.offer">L'offre</a>
+      <a href="#realisations" data-i18n="nav.work">Réalisations</a>
+      <a href="#methode" data-i18n="nav.method">Méthode</a>
+      <a href="#faq" data-i18n="nav.faq">Questions</a>
     </nav>
+    <div class="header-actions">
+      <button type="button" class="lang" id="lang-toggle" aria-label="Switch to English" data-i18n-aria="langAria">EN</button>
+      <a class="btn btn-small" href="#contact" data-i18n="nav.cta">Demander un devis</a>
+    </div>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" role="banner" itemprop="mainContentOfPage">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-i18n="hero.title" itemprop="headline">A Website That Works as Hard as You Do</h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle" itemprop="description">Get a beautiful, fast, and SEO-optimized website designed to attract new customers. All for a simple, one-time fee from €490.</p>
-                <div class="cta-container">
-                    <a href="https://calendly.com/izutech-fr/30min" target="_blank" class="btn btn-primary" data-i18n="hero.cta" rel="noopener" aria-label="Schedule a free consultation">Free Consultation</a>
-                    <a href="#pricing" class="btn btn-secondary" data-i18n="hero.secondary" aria-label="View our pricing plans">See Plans & Pricing</a>
-                </div>
-                
-            </div>
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="hero-kicker" data-i18n="hero.kicker">Sites web pour artisans, commerces et associations. Ariège, Pau et à distance.</p>
+      <h1 data-i18n="hero.title">Un site clair, en ligne en une semaine.</h1>
+      <p class="hero-lead" data-i18n="hero.lead">Vos clients vous cherchent sur leur téléphone. Je crée un site simple et rapide qui montre ce que vous faites, où vous trouver et comment vous joindre. Prix fixe de 490 €, sans abonnement obligatoire.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact" data-i18n="hero.cta">Demander un devis gratuit</a>
+        <a class="link-quiet" href="#realisations" data-i18n="hero.secondary">Voir des sites que j'ai créés</a>
+      </div>
+      <p class="hero-note" data-i18n="hero.note">Devis gratuit et sans engagement, sous 24 h ouvrées.</p>
+    </div>
+    <svg class="ridge" viewBox="0 0 1200 180" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="ridge-back" d="M0 150 L70 128 L120 138 L190 104 L240 120 L300 90 L350 112 L420 82 L470 100 L540 70 L600 96 L660 64 L720 92 L790 58 L850 88 L920 74 L980 102 L1050 80 L1120 110 L1200 96"/>
+      <path class="ridge-front" d="M0 170 L90 150 L150 158 L230 126 L290 142 L360 118 L420 136 L500 104 L548 118 L590 70 L606 82 L622 40 L640 30 L660 58 L676 50 L700 96 L760 118 L830 100 L900 128 L980 112 L1060 138 L1130 124 L1200 140"/>
+      <circle class="ridge-dot" cx="640" cy="12" r="5"/>
+      <rect class="ridge-dot" x="616" y="18" width="8" height="8"/>
+      <rect class="ridge-dot" x="656" y="18" width="8" height="8"/>
+    </svg>
+  </section>
+
+  <section class="section section-tint" id="offre" aria-labelledby="offre-title">
+    <div class="wrap">
+      <h2 id="offre-title" data-i18n="offer.title">L'offre</h2>
+      <p class="section-lead" data-i18n="offer.lead">Un prix fixe, connu dès le départ. Vous ne payez que les options dont vous avez besoin.</p>
+
+      <ol class="offers">
+        <li class="offer">
+          <div class="offer-body">
+            <h3 data-i18n="offer.main.t">Site essentiel</h3>
+            <p data-i18n="offer.main.d">Tout ce qu'il faut pour être trouvé et contacté.</p>
+            <ul class="included">
+              <li data-i18n="offer.main.i1">Jusqu'à 5 pages, ou une page unique avec 5 sections</li>
+              <li data-i18n="offer.main.i2">Lisible et rapide sur téléphone, tablette et ordinateur</li>
+              <li data-i18n="offer.main.i3">Bases du référencement : titres, descriptions, horaires et adresse lisibles par Google</li>
+              <li data-i18n="offer.main.i4">Formulaire de contact qui vous envoie les demandes par email</li>
+              <li data-i18n="offer.main.i5">Hébergement compris, sans frais annuels</li>
+              <li data-i18n="offer.main.i6">Une courte formation pour modifier vous-même textes et photos</li>
+            </ul>
+          </div>
+          <p class="price"><span data-i18n="offer.once">prix unique</span> <strong>490 €</strong></p>
+        </li>
+      </ol>
+
+      <h3 class="options-title" data-i18n="offer.optionsTitle">Options</h3>
+      <dl class="options">
+        <div><dt data-i18n="offer.o1.t">Version bilingue</dt><dd data-i18n="offer.o1.d">Le site en français et dans une autre langue.</dd><dd class="opt-price">+ 150 €</dd></div>
+        <div><dt data-i18n="offer.o2.t">Paiement en ligne</dt><dd data-i18n="offer.o2.d">Adhésions, inscriptions ou petites ventes, par carte.</dd><dd class="opt-price">+ 200 €</dd></div>
+        <div><dt data-i18n="offer.o3.t">Création de logo</dt><dd data-i18n="offer.o3.d">Un logo simple, livré dans les formats utiles.</dd><dd class="opt-price">+ 150 €</dd></div>
+        <div><dt data-i18n="offer.o4.t">Suivi et mises à jour</dt><dd data-i18n="offer.o4.d">Je fais vos modifications et je veille au renouvellement de votre nom de domaine. Sans engagement.</dd><dd class="opt-price"><span data-i18n="offer.perMonth">30 € / mois</span></dd></div>
+      </dl>
+      <p class="offers-foot" data-i18n="offer.domain">Le nom de domaine (par exemple votre-entreprise.fr) est enregistré à votre nom. Il coûte en général moins de 20 € par an, payés directement à l'organisme qui l'enregistre.</p>
+    </div>
+  </section>
+
+  <section class="section" id="realisations" aria-labelledby="realisations-title">
+    <div class="wrap">
+      <h2 id="realisations-title" data-i18n="work.title">Des sites que j'ai créés</h2>
+      <p class="section-lead" data-i18n="work.lead">Trois structures locales, trois besoins différents.</p>
+      <div class="work">
+        <article class="work-item">
+          <img src="https://andremotoculture09.fr/logo-andre.png" alt="Logo André Motoculture" width="96" height="96" loading="lazy" onerror="this.hidden=true">
+          <div>
+            <h3>André Motoculture</h3>
+            <p class="work-kind" data-i18n="work.w1.kind">Réparation de matériel de jardin, Ariège</p>
+            <p data-i18n="work.w1.d">Les services, les communes desservies, les horaires et une demande de devis en quelques clics.</p>
+            <p><a href="https://andremotoculture09.fr/" target="_blank" rel="noopener" data-i18n="work.visit">Voir le site</a></p>
+          </div>
+        </article>
+        <article class="work-item">
+          <img src="https://apecollegehappy.fr/images/logo.png" alt="Logo APE François-Verdier" width="96" height="96" loading="lazy" onerror="this.hidden=true">
+          <div>
+            <h3>APE François-Verdier</h3>
+            <p class="work-kind" data-i18n="work.w2.kind">Association de parents d'élèves, Lézat-sur-Lèze</p>
+            <p data-i18n="work.w2.d">Les événements de l'année, les inscriptions au bal et les informations utiles aux familles.</p>
+            <p><a href="https://apecollegehappy.fr/" target="_blank" rel="noopener" data-i18n="work.visit">Voir le site</a></p>
+          </div>
+        </article>
+        <article class="work-item">
+          <img src="photo/portfolio/coq-carlanais-logo.jpg" alt="Logo Coq Carlanais" width="96" height="96" loading="lazy">
+          <div>
+            <h3>Coq Carlanais</h3>
+            <p class="work-kind" data-i18n="work.w3.kind">Club de basket, Carla-Bayle</p>
+            <p data-i18n="work.w3.d">Le planning des équipes, les tarifs des licences, les inscriptions et les partenaires du club. Ce site n'est plus en ligne.</p>
+            <p><a href="photo/portfolio/coq-carlanais-apercu.jpg" target="_blank" rel="noopener" data-i18n="work.preview">Voir un aperçu</a></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="methode" aria-labelledby="methode-title">
+    <div class="wrap">
+      <h2 id="methode-title" data-i18n="method.title">Comment ça se passe</h2>
+      <ol class="steps">
+        <li><h3 data-i18n="method.s1.t">On fait le point</h3><p data-i18n="method.s1.d">Un appel ou un rendez-vous pour comprendre votre activité, vos clients et ce que le site doit faire. Vous recevez un devis fixe.</p></li>
+        <li><h3 data-i18n="method.s2.t">Je crée le site, en 5 à 7 jours ouvrés</h3><p data-i18n="method.s2.d">Vous m'envoyez vos textes et photos, ou on les prépare ensemble.</p></li>
+        <li><h3 data-i18n="method.s3.t">Vous relisez</h3><p data-i18n="method.s3.d">Vous voyez le site avant sa mise en ligne. J'intègre vos corrections.</p></li>
+        <li><h3 data-i18n="method.s4.t">Mise en ligne et prise en main</h3><p data-i18n="method.s4.d">Le site est en ligne sur votre nom de domaine. Je vous montre comment faire les petites modifications vous-même.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="apropos" aria-labelledby="apropos-title">
+    <div class="wrap about">
+      <figure class="portrait">
+        <img src="photo/izumi-berat.jpg" alt="Portrait d'Izumi Bérat" data-i18n-alt="about.photoAlt" width="480" height="480" loading="lazy">
+        <figcaption><strong>Izumi Bérat</strong><span data-i18n="about.role">IzuTech</span></figcaption>
+      </figure>
+      <div class="about-text">
+        <h2 id="apropos-title" data-i18n="about.title">Qui crée votre site</h2>
+        <p data-i18n="about.p1">Je m'appelle Izumi Bérat. Je suis ingénieur, et j'ai travaillé de nombreuses années dans l'informatique et le web, notamment comme directeur des projets web à l'Université Columbia à New York.</p>
+        <p data-i18n="about.p2">Aujourd'hui, je crée des sites pour les petites structures autour de moi. Vous avez un seul interlocuteur, du premier appel à la mise en ligne, et je vous réponds directement.</p>
+        <p class="about-aside" data-i18n="about.more">J'aide aussi les PME à automatiser leurs tâches répétitives avec l'IA : <a href="https://izutech.fr/">izutech.fr</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 id="faq-title" data-i18n="faq.title">Questions fréquentes</h2>
+      <div class="faq">
+        <details><summary data-i18n="faq.q1">Combien de temps faut-il ?</summary><p data-i18n="faq.a1">5 à 7 jours ouvrés après notre premier échange, une fois que j'ai vos textes et vos photos.</p></details>
+        <details><summary data-i18n="faq.q2">Pourrai-je modifier le site moi-même ?</summary><p data-i18n="faq.a2">Oui, pour les textes et les photos. Je vous montre comment faire à la livraison. Pour les changements plus importants, je peux m'en charger avec le suivi mensuel, ou sur devis.</p></details>
+        <details><summary data-i18n="faq.q3">Y a-t-il des frais chaque année ?</summary><p data-i18n="faq.a3">L'hébergement est compris, sans frais annuels. Seul le nom de domaine se renouvelle chaque année, en général pour moins de 20 €. Il est à votre nom : le site vous appartient.</p></details>
+        <details><summary data-i18n="faq.q4">Et si je n'ai pas de textes ni de photos ?</summary><p data-i18n="faq.a4">On les prépare ensemble à partir d'un échange. Quelques photos prises avec votre téléphone suffisent souvent.</p></details>
+        <details><summary data-i18n="faq.q5">Mon site sera-t-il trouvé sur Google ?</summary><p data-i18n="faq.a5">Le site est construit pour être bien lu par Google : titres clairs, adresse, horaires, pages rapides. Je ne peux pas promettre une première place, personne ne le peut honnêtement.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="contact-title" data-i18n="contact.title">Parlons de votre site</h2>
+        <p data-i18n="contact.lead">Dites-moi en quelques lignes ce que vous faites et ce que le site doit montrer. Je vous envoie un devis gratuit sous 24 h ouvrées.</p>
+        <p data-i18n="contact.or">Vous préférez en parler de vive voix ?</p>
+        <p><a class="btn btn-ghost" href="https://calendly.com/izutech-fr/30min" target="_blank" rel="noopener" data-i18n="contact.call">Réserver un appel de 30 min</a></p>
+        <p class="contact-mail"><span data-i18n="contact.mail">Par email :</span> <a href="mailto:contact@izutech.fr">contact@izutech.fr</a></p>
+      </div>
+      <form id="lead-form" class="form" action="https://formspree.io/f/mgvndjvo" method="POST" novalidate>
+        <div class="field">
+          <label for="f-name" data-i18n="form.name">Votre nom</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services" role="region" aria-labelledby="services-heading">
-        <div class="container">
-            <h2 class="section-title" id="services-heading" data-i18n="services.title">Everything You Need to Get Online</h2>
-            <div class="services-grid">
-                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon" aria-hidden="true">🚀</div>
-                    <h3 data-i18n="services.feature1.title" itemprop="name">Blazing Fast & Mobile-Ready</h3>
-                    <p data-i18n="services.feature1.description" itemprop="description">Lightning-fast loading speeds and a flawless experience on any device.</p>
-                </div>
-                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon" aria-hidden="true">🔍</div>
-                    <h3 data-i18n="services.feature2.title" itemprop="name">Built-In SEO</h3>
-                    <p data-i18n="services.feature2.description" itemprop="description">Get found on Google from day one with our comprehensive on-page and local SEO setup.</p>
-                </div>
-                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon" aria-hidden="true">🎨</div>
-                    <h3 data-i18n="services.feature3.title" itemprop="name">Professional, Custom Design</h3>
-                    <p data-i18n="services.feature3.description" itemprop="description">A unique, modern website that builds trust and reflects your brand's quality.</p>
-                </div>
-                <div class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon" aria-hidden="true">📧</div>
-                    <h3 data-i18n="services.feature4.title" itemprop="name">Direct Lead Capture</h3>
-                    <p data-i18n="services.feature4.description" itemprop="description">Working contact forms that deliver customer inquiries straight to your inbox.</p>
-                </div>
-            </div>
+        <div class="field">
+          <label for="f-email" data-i18n="form.email">Votre email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
         </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing" role="region" aria-labelledby="pricing-heading">
-        <div class="container">
-            <h2 class="section-title" id="pricing-heading" data-i18n="pricing.title">Simple, All-Inclusive Pricing</h2>
-            <div class="pricing-grid">
-                <!-- Basic Package -->
-                <div class="pricing-card featured" itemscope itemtype="https://schema.org/Offer">
-                    <div class="pricing-badge" data-i18n="pricing.mostPopular">Most Popular</div>
-                    <h3 data-i18n="pricing.basic.title" itemprop="name">Essential Website</h3>
-                    <div class="price" itemprop="price" content="490">€490</div>
-                    <p class="price-description" data-i18n="pricing.basic.description" itemprop="description">One-time fee. No hidden costs.</p>
-                    
-                    <ul class="features-list">
-                        <li data-i18n="pricing.basic.features.0">Up to 5 pages (or sections for one-page sites)</li>
-                        <li data-i18n="pricing.basic.features.1">100% Mobile-Responsive Design</li>
-                        <li data-i18n="pricing.basic.features.2">Complete On-Page SEO Foundation</li>
-                        <li data-i18n="pricing.basic.features.3">Integrated Contact Form</li>
-                        <li data-i18n="pricing.basic.features.4">Secure Hosting Included</li>
-                        <li data-i18n="pricing.basic.features.5">Basic Handover Training</li>
-                    </ul>
-                    
-                    <a href="#contact" class="btn btn-primary" data-i18n="pricing.cta" aria-label="Start your Essential Website project">Start Your Project</a>
-                </div>
-
-                <!-- Add-ons -->
-                <div class="pricing-card">
-                    <h3 data-i18n="pricing.addons.title">Enhance Your Site</h3>
-                    <div class="addons-list">
-                        <div class="addon-item">
-                            <span data-i18n="pricing.addons.multilingual">Multilingual (Bilingual) Version</span>
-                            <span class="addon-price">+€150</span>
-                        </div>
-                        <div class="addon-item">
-                            <span data-i18n="pricing.addons.payment">Online Payment System</span>
-                            <span class="addon-price">+€200</span>
-                        </div>
-                        <div class="addon-item">
-                            <span data-i18n="pricing.addons.logo">Professional Logo Design</span>
-                            <span class="addon-price">+€150</span>
-                        </div>
-                        <div class="addon-item">
-                            <span data-i18n="pricing.addons.maintenance">Ongoing Care & Support</span>
-                            <span class="addon-price">+€30/month</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="field">
+          <label for="f-phone"><span data-i18n="form.phone">Téléphone</span> <span class="optional" data-i18n="form.optional">(facultatif)</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel">
         </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="process" role="region" aria-labelledby="process-heading">
-        <div class="container">
-            <h2 class="section-title" id="process-heading" data-i18n="process.title">Get Online in 4 Simple Steps</h2>
-            <div class="process-steps">
-                <div class="step" itemscope itemtype="https://schema.org/HowToStep">
-                    <div class="step-number">1</div>
-                    <h3 data-i18n="process.step1.title" itemprop="name">Discovery & Plan</h3>
-                    <p data-i18n="process.step1.description" itemprop="text">We hop on a call to understand your business and goals.</p>
-                </div>
-                <div class="step" itemscope itemtype="https://schema.org/HowToStep">
-                    <div class="step-number">2</div>
-                    <h3 data-i18n="process.step2.title" itemprop="name">Design & Build</h3>
-                    <p data-i18n="process.step2.description" itemprop="text">Your website is crafted and developed within 5-7 business days.</p>
-                </div>
-                <div class="step" itemscope itemtype="https://schema.org/HowToStep">
-                    <div class="step-number">3</div>
-                    <h3 data-i18n="process.step3.title" itemprop="name">Review & Revise</h3>
-                    <p data-i18n="process.step3.description" itemprop="text">You preview the site and we refine it based on your feedback.</p>
-                </div>
-                <div class="step" itemscope itemtype="https://schema.org/HowToStep">
-                    <div class="step-number">4</div>
-                    <h3 data-i18n="process.step4.title" itemprop="name">Launch & Support</h3>
-                    <p data-i18n="process.step4.description" itemprop="text">We go live and provide training so you can manage your new site.</p>
-                </div>
-            </div>
+        <div class="field">
+          <label for="f-business"><span data-i18n="form.business">Votre activité</span> <span class="optional" data-i18n="form.optional">(facultatif)</span></label>
+          <input id="f-business" name="business" type="text" data-i18n-placeholder="form.businessPh" placeholder="Par exemple : boulangerie, garage, association sportive">
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio" role="region" aria-labelledby="portfolio-heading">
-        <div class="container">
-            <h2 class="section-title" id="portfolio-heading" data-i18n="portfolio.title">Our Recent Work</h2>
-            <p class="portfolio-subtitle" data-i18n="portfolio.subtitle">See how we've helped local businesses and organizations establish their online presence</p>
-            
-            <div class="portfolio-grid">
-                <!-- Coq Carlanais Project - Basketball Club -->
-                <div class="portfolio-card" itemscope itemtype="https://schema.org/CreativeWork">
-                    <div class="portfolio-image">
-                        <img src="photo/portfolio/coq-carlanais-logo.jpg" alt="Coq Carlanais - Club de Basket du Carla Bayle website showcase" loading="lazy" itemprop="image">
-                        <div class="portfolio-overlay">
-                            <a href="photo/portfolio/coq-carlanais-apercu.jpg" target="_blank" class="portfolio-link" rel="noopener" data-i18n="portfolio.viewPreview">See a Preview</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-i18n="portfolio.project1.title" itemprop="name">Coq Carlanais</h3>
-                        <p class="portfolio-category" data-i18n="portfolio.project1.category">Basketball Club</p>
-                        <p class="portfolio-note" data-i18n="portfolio.project1.note">This site is no longer online. You can still see a preview of it.</p>
-                        <p data-i18n="portfolio.project1.description" itemprop="description">A comprehensive website for a local basketball club featuring team schedules, registration forms, sponsorship programs, and event management.</p>
-                        <div class="portfolio-features">
-                            <span class="feature-tag" data-i18n="portfolio.features.responsive">Mobile-First</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.seo">SEO Optimized</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.forms">Contact Forms</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.events">Event Management</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- André Motoculture Project -->
-                <div class="portfolio-card" itemscope itemtype="https://schema.org/CreativeWork">
-                    <div class="portfolio-image">
-                        <img src="https://andremotoculture09.fr/logo-andre.png" alt="André Motoculture - Services de Jardinage website showcase" loading="lazy" itemprop="image">
-                        <div class="portfolio-overlay">
-                            <a href="https://andremotoculture09.fr" target="_blank" class="portfolio-link" rel="noopener" data-i18n="portfolio.visitSite" itemprop="url">Visit Site</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-i18n="portfolio.project2.title" itemprop="name">André Motoculture</h3>
-                        <p class="portfolio-category" data-i18n="portfolio.project2.category">Gardening Repair Services</p>
-                        <p data-i18n="portfolio.project2.description" itemprop="description">A professional website for gardening repair services, showcasing their expertise, service areas, and contact information.</p>
-                        <div class="portfolio-features">
-                            <span class="feature-tag" data-i18n="portfolio.features.responsive">Mobile-First</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.seo">SEO Optimized</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.forms">Contact Forms</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.quote">Quote Requests</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- APE François-Verdier Project - NEW ADDITION -->
-                <div class="portfolio-card" itemscope itemtype="https://schema.org/CreativeWork">
-                    <div class="portfolio-image">
-                        <img src="https://apecollegehappy.fr/images/logo.png" alt="APE François-Verdier - Association de Parents d'Élèves website showcase" loading="lazy" itemprop="image">
-                        <div class="portfolio-overlay">
-                            <a href="https://apecollegehappy.fr" target="_blank" class="portfolio-link" rel="noopener" data-i18n="portfolio.visitSite" itemprop="url">Visit Site</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 data-i18n="portfolio.project3.title" itemprop="name">APE François-Verdier</h3>
-                        <p class="portfolio-category" data-i18n="portfolio.project3.category">Parents Association</p>
-                        <p data-i18n="portfolio.project3.description" itemprop="description">A comprehensive website for a middle school parents' association featuring event management, winter ball registrations, resources for parents, and communication tools.</p>
-                        <div class="portfolio-features">
-                            <span class="feature-tag" data-i18n="portfolio.features.responsive">Mobile-First</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.seo">SEO Optimized</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.forms">Contact Forms</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.events">Event Management</span>
-                            <span class="feature-tag" data-i18n="portfolio.features.registration">Registration Systems</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Portfolio CTA -->
-            <div class="portfolio-cta">
-                <h3 data-i18n="portfolio.cta.title">Ready to Build Your Success Story?</h3>
-                <p data-i18n="portfolio.cta.subtitle">Let's create a website that showcases your business and drives results</p>
-                <div class="cta-container">
-                    <a href="#contact" class="btn btn-primary" data-i18n="portfolio.cta.primary">Start Your Project</a>
-                    <a href="https://calendly.com/izutech-fr/30min" target="_blank" class="btn btn-secondary" data-i18n="portfolio.cta.secondary" rel="noopener">Book a Free Consultation</a>
-                </div>
-            </div>
+        <div class="field">
+          <label for="f-task" data-i18n="form.message">Votre projet</label>
+          <textarea id="f-task" name="message" rows="5" required data-i18n-placeholder="form.messagePh" placeholder="Ce que vous faites, ce que le site doit montrer, et les options qui vous intéressent."></textarea>
         </div>
-    </section>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn" id="f-submit" data-i18n="form.submit">Demander mon devis</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact" role="region" aria-labelledby="contact-heading">
-        <div class="container">
-            <h2 class="section-title" id="contact-heading" data-i18n="contact.title">Ready for Your New Website?</h2>
-            <div class="contact-grid">
-                <!-- Trust Section - Mobile First -->
-                <div class="trust-section-mobile">
-                    <h3 data-i18n="contact.trust.title">Why Choose IzuTech</h3>
-                    <div class="trust-points-mobile">
-                        <div class="trust-point-mobile">
-                            <div class="trust-icon" aria-hidden="true">🚀</div>
-                            <h4 data-i18n="contact.trust.points.0.title">Fast Turnaround</h4>
-                            <p data-i18n="contact.trust.points.0.mobileText">5-7 Day Launch</p>
-                        </div>
-                        <div class="trust-point-mobile">
-                            <div class="trust-icon" aria-hidden="true">💰</div>
-                            <h4 data-i18n="contact.trust.points.1.title">No Surprise Fees</h4>
-                            <p data-i18n="contact.trust.points.1.mobileText">All-Inclusive Price</p>
-                        </div>
-                        <div class="trust-point-mobile">
-                            <div class="trust-icon" aria-hidden="true">💬</div>
-                            <h4 data-i18n="contact.trust.points.2.title">Quick Response Guarantee</h4>
-                            <p data-i18n="contact.trust.points.2.mobileText">24h Response</p>
-                        </div>
-                        <div class="trust-point-mobile">
-                            <div class="trust-icon" aria-hidden="true">📱</div>
-                            <h4 data-i18n="contact.trust.points.3.title">Mobile-First Expert</h4>
-                            <p data-i18n="contact.trust.points.3.mobileText">Mobile-First</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Contact Options - Shows first on mobile -->
-                <div class="contact-options">
-                    <div class="contact-option-card">
-                        <div class="option-icon" aria-hidden="true">📧</div>
-                        <h3 data-i18n="contact.options.form.title">Get a detailed quote</h3>
-                        <p data-i18n="contact.options.form.description">Share your project details and we'll send you a personalized quote within 24 hours.</p>
-                        <div class="option-actions">
-                            <button class="btn btn-primary show-form-btn" data-i18n="contact.options.form.button" aria-haspopup="true" aria-expanded="false">Request Your Quote</button>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-option-card">
-                        <div class="option-icon" aria-hidden="true">📞</div>
-                        <h3 data-i18n="contact.options.call.title">Quick 30-min call</h3>
-                        <p data-i18n="contact.options.call.description">A free, no-obligation call to discuss your needs and get immediate answers.</p>
-                        <div class="option-actions">
-                            <a href="https://calendly.com/izutech-fr/30min" target="_blank" class="btn btn-secondary" data-i18n="contact.options.call.button" rel="noopener">Schedule a Call</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-option-card">
-                        <div class="option-icon" aria-hidden="true">✉️</div>
-                        <h3 data-i18n="contact.options.email.title">Send us an email</h3>
-                        <p data-i18n="contact.options.email.description">Prefer email? Send us your requirements and we'll get back to you promptly.</p>
-                        <div class="option-actions">
-                            <a href="mailto:contact@izutech.fr" class="btn btn-card email-direct-btn">
-                                <span>contact@izutech.fr</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+</main>
 
-                <!-- Contact Form & Trust Section -->
-                <div class="contact-form-and-trust">
-                    <!-- Contact Form -->
-                    <div class="contact-form-container">
-                        <div class="form-header">
-                            <h3 data-i18n="contact.form.title">Tell Us About Your Project</h3>
-                            <button class="back-to-options btn btn-text" data-i18n="contact.form.back">← Back to contact options</button>
-                        </div>
-                        
-                        <div class="contact-form">
-                            <form id="lead-form" action="https://formspree.io/f/mgvndjvo" method="POST" itemscope itemtype="https://schema.org/ContactPoint">
-                                <div class="form-group">
-                                    <label for="name" data-i18n="contact.form.name">Your Name *</label>
-                                    <input type="text" id="name" name="name" required itemprop="name">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="email" data-i18n="contact.form.email">Your Email *</label>
-                                    <input type="email" id="email" name="email" required itemprop="email">
-                                </div>
-                    
-                                <div class="form-group">
-                                    <label for="phone" data-i18n="contact.form.phone">Phone Number (Optional)</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+33 1 23 45 67 89" itemprop="telephone">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="business" data-i18n="contact.form.business">Your Business Type</label>
-                                    <input type="text" id="business" name="business" data-i18n-placeholder="contact.form.businessPlaceholder" placeholder="e.g., Restaurant, Salon, Local Shop" itemprop="description">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="message" data-i18n="contact.form.message">Your Project Details *</label>
-                                    <textarea id="message" name="message" rows="4" required data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Tell us about your business, what you'd like to achieve with your website, and any specific features you need (online payments, booking, multilingual, etc.)" itemprop="description"></textarea>
-                                </div>
-                                
-                                <!-- Add-ons guidance -->
-                                <div class="addons-guidance">
-                                    <p><strong data-i18n="contact.addonsGuidance.title">Popular add-ons to mention:</strong></p>
-                                    <div class="addons-tags">
-                                        <span class="addon-tag" data-i18n="contact.addonsGuidance.onlinePayments">Online Payments</span>
-                                        <span class="addon-tag" data-i18n="contact.addonsGuidance.bookingSystem">Booking System</span>
-                                        <span class="addon-tag" data-i18n="contact.addonsGuidance.multilingual">Multilingual</span>
-                                        <span class="addon-tag" data-i18n="contact.addonsGuidance.professionalLogo">Professional Logo</span>
-                                        <span class="addon-tag" data-i18n="contact.addonsGuidance.ongoingSupport">Ongoing Support</span>
-                                    </div>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">
-                                    <span class="btn-text">Get My Free Quote</span>
-                                    <span class="btn-loading" style="display: none;">Sending...</span>
-                                </button>
-                            </form>
-                        </div>
-                    
-                        <!-- Success Message -->
-                        <div id="form-success" class="form-success-message" style="display: none;">
-                            <div class="success-icon" aria-hidden="true">✓</div>
-                            <h3 data-i18n="contact.success.title">Thank You!</h3>
-                            <p data-i18n="contact.success.message">We've received your request. We're reviewing it and will send your personalized quote within 24 hours.</p>
-                            <button onclick="resetForm()" class="btn btn-secondary" data-i18n="contact.success.button">Submit Another Request</button>
-                        </div>
-                    </div>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-brand">IzuTech</p>
+      <p data-i18n="footer.where">Sites web pour artisans, commerces et associations.</p>
+      <p><a href="mailto:contact@izutech.fr">contact@izutech.fr</a></p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://izutech.fr/" data-i18n="footer.ai">Automatisation IA pour les PME</a></li>
+      <li><a href="https://seniors.izutech.fr/" data-i18n="footer.seniors">Aide numérique pour les seniors</a></li>
+      <li><a href="https://events.izutech.fr/" data-i18n="footer.events">Tableaux de bord pour événements</a></li>
+    </ul>
+  </div>
+  <div class="wrap footer-base">
+    <p>© 2026 IzuTech · <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales et confidentialité</a></p>
+  </div>
+</footer>
 
-
-                    <!-- Trust Section - Desktop -->
-                    <div class="trust-section">
-                        <h3 data-i18n="contact.trust.title">Why Choose IzuTech</h3>
-                        
-                        <div class="trust-points">
-                            <div class="trust-point">
-                                <div class="trust-icon" aria-hidden="true">🚀</div>
-                                <div class="trust-content">
-                                    <h4 data-i18n="contact.trust.points.0.title">Fast Turnaround</h4>
-                                    <p data-i18n="contact.trust.points.0.text">Your website ready to go in 5-7 business days</p>
-                                </div>
-                            </div>
-                            
-                            <div class="trust-point">
-                                <div class="trust-icon" aria-hidden="true">💰</div>
-                                <div class="trust-content">
-                                    <h4 data-i18n="contact.trust.points.1.title">No Surprise Fees</h4>
-                                    <p data-i18n="contact.trust.points.1.text">One transparent, all-inclusive price from €490</p>
-                                </div>
-                            </div>
-                            
-                            <div class="trust-point">
-                                <div class="trust-icon" aria-hidden="true">💬</div>
-                                <div class="trust-content">
-                                    <h4 data-i18n="contact.trust.points.2.title">Quick Response Guarantee</h4>
-                                    <p data-i18n="contact.trust.points.2.text">We answer all inquiries within one business day</p>
-                                </div>
-                            </div>
-                            
-                            <div class="trust-point">
-                                <div class="trust-icon" aria-hidden="true">📱</div>
-                                <div class="trust-content">
-                                    <h4 data-i18n="contact.trust.points.3.title">Mobile-First Expert</h4>
-                                    <p data-i18n="contact.trust.points.3.text">Websites designed for the way people browse today</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Additional trust element -->
-                        <div class="trust-footer">
-                            <div class="guarantee-badge">
-                                <span class="badge-icon" aria-hidden="true">✅</span>
-                                <span class="badge-text" data-i18n="contact.trust.guarantee">Free Consultation & Fixed-Price Quote</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="faq" role="region" aria-labelledby="faq-heading">
-        <div class="container">
-            <h2 class="section-title" id="faq-heading" data-i18n="faq.title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item" itemscope itemtype="https://schema.org/Question">
-                    <h3 data-i18n="faq.q1" itemprop="name">How long until my website is live?</h3>
-                    <p data-i18n="faq.a1" itemprop="suggestedAnswer" itemscope itemtype="https://schema.org/Answer">Most of our websites are completed and launched within 5-7 business days after the project kick-off.</p>
-                </div>
-                <div class="faq-item" itemscope itemtype="https://schema.org/Question">
-                    <h3 data-i18n="faq.q2" itemprop="name">What about updates and support after launch?</h3>
-                    <p data-i18n="faq.a2" itemprop="suggestedAnswer" itemscope itemtype="https://schema.org/Answer">Yes, we offer optional monthly care plans for content updates, technical support, and peace of mind.</p>
-                </div>
-                <div class="faq-item" itemscope itemtype="https://schema.org/Question">
-                    <h3 data-i18n="faq.q3" itemprop="name">Can I edit the website myself?</h3>
-                    <p data-i18n="faq.a3" itemprop="suggestedAnswer" itemscope itemtype="https://schema.org/Answer">We provide training for basic text and image updates. For more complex changes, our care plan saves you time and ensures it's done right.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
-        <div class="container">
-            <!-- Business Ecosystem Section -->
-            <div class="footer-businesses" role="complementary" aria-labelledby="businesses-title">
-                <h4 id="businesses-title" class="footer-section-title" data-i18n="footer.businesses.title">Discover Our Ecosystem</h4>
-                <div class="businesses-grid" role="list" aria-label="Our business portfolio">
-                    
-                    <div class="business-card" role="listitem" itemscope itemtype="https://schema.org/Organization">
-                        <div class="business-icon" aria-hidden="true">🤖</div>
-                        <h5 data-i18n="footer.businesses.ai.title" itemprop="name">AI Solutions</h5>
-                        <p data-i18n="footer.businesses.ai.description" itemprop="description">Practical AI automation for your business</p>
-                        <a href="https://izutech.fr/" target="_blank" rel="noopener" class="business-link" data-i18n="footer.businesses.cta" itemprop="url">Explore →</a>
-                    </div>
-                    
-                    <div class="business-card" role="listitem" itemscope itemtype="https://schema.org/Organization">
-                        <div class="business-icon" aria-hidden="true">📊</div>
-                        <h5 data-i18n="footer.businesses.events.title" itemprop="name">Event Dashboards</h5>
-                        <p data-i18n="footer.businesses.events.description" itemprop="description">Real-time analytics for your events</p>
-                        <a href="https://events.izutech.fr/" target="_blank" rel="noopener" class="business-link" data-i18n="footer.businesses.cta" itemprop="url">Explore →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Centered Brand Footer -->
-            <div class="footer-brand-centered">
-                <div class="container">
-                    <div class="footer-logo">
-                        <img src="photo/IzuTech-logo.png" alt="IzuTech - Professional Websites for Businesses" width="120" height="30" itemprop="logo" loading="lazy">
-                    </div>
-                    <p class="footer-tagline" data-i18n="footer.tagline">Accelerating Business Digital Transformation with AI</p>
-                    <div class="footer-legal">
-                        <p class="footer-copyright" data-i18n="footer.copyright" itemprop="copyrightYear">© 2026 IzuTech. All rights reserved.</p>
-                        <p class="footer-privacy" data-i18n="footer.privacy" itemprop="description">Your data is processed in compliance with GDPR and secured.</p>
-                        <p class="footer-privacy"><a href="mentions-legales.html" data-i18n="footer.legal">Legal notice and privacy (in French)</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
