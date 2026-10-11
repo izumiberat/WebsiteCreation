@@ -1,419 +1,248 @@
-// Language management and form handling
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle functionality
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-        });
-    }
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (navMenu?.classList.contains('active') && 
-            !e.target.closest('.nav-menu') && 
-            !e.target.closest('.hamburger') &&
-            !e.target.closest('.language-selector')) {
-            closeMobileMenu();
-        }
+/* IzuTech web: language switch (French first, English available) and contact form. */
+(function () {
+  "use strict";
+
+  var EN = {
+    "skip": "Skip to content",
+    "navLabel": "Main navigation",
+    "langAria": "Passer en français",
+    "nav.offer": "Pricing",
+    "nav.work": "Examples",
+    "nav.method": "How it works",
+    "nav.faq": "Questions",
+    "nav.cta": "Get a quote",
+
+    "hero.kicker": "Websites for tradespeople, shops and associations. Based in Pau, on site or remote.",
+    "hero.title": "A clear website, online in a week.",
+    "hero.lead": "Your customers look you up on their phone. I build a simple, fast website that shows what you do, where to find you and how to reach you. Fixed price of €490, no compulsory subscription.",
+    "hero.cta": "Get a free quote",
+    "hero.secondary": "See websites I’ve built",
+    "hero.note": "Free quote, no commitment, within one working day.",
+
+    "offer.title": "Pricing",
+    "offer.lead": "A fixed price, known from the start. You only pay for the options you need.",
+    "offer.main.t": "Essential website",
+    "offer.main.d": "Everything you need to be found and contacted.",
+    "offer.main.i1": "Up to 5 pages, or a single page with 5 sections",
+    "offer.main.i2": "Easy to read and fast on phone, tablet and computer",
+    "offer.main.i3": "Search basics: titles, descriptions, opening hours and address that Google can read",
+    "offer.main.i4": "Contact form that sends requests to your email",
+    "offer.main.i5": "Hosting included, no yearly fees",
+    "offer.main.i6": "A short training session so you can edit text and photos yourself",
+    "offer.once": "one-time price",
+    "offer.optionsTitle": "Options",
+    "offer.o1.t": "Bilingual version",
+    "offer.o1.d": "The site in French and one other language.",
+    "offer.o2.t": "Online payments",
+    "offer.o2.d": "Memberships, registrations or small sales, by card.",
+    "offer.o3.t": "Logo design",
+    "offer.o3.d": "A simple logo, delivered in the formats you need.",
+    "offer.o4.t": "Updates and support",
+    "offer.o4.d": "I make your changes and keep an eye on your domain name renewal. No commitment.",
+    "offer.perMonth": "€30 / month",
+    "offer.domain": "The domain name (for example your-business.fr) is registered in your name. It usually costs less than €20 a year, paid directly to the company that registers it.",
+
+    "work.title": "Websites I’ve built",
+    "work.lead": "Three local organisations, three different needs.",
+    "work.visit": "Visit the site",
+    "work.preview": "See a preview",
+    "work.w1.kind": "Garden equipment repair, Ariège",
+    "work.w1.d": "Services, the villages covered, opening hours and a quote request in a few clicks.",
+    "work.w2.kind": "Parents’ association, Lézat-sur-Lèze",
+    "work.w2.d": "The year’s events, sign-ups for the dance and useful information for families.",
+    "work.w3.kind": "Basketball club, Carla-Bayle",
+    "work.w3.d": "Team schedules, membership fees, registrations and the club’s sponsors. This site is no longer online.",
+
+    "method.title": "How it works",
+    "method.s1.t": "We talk it through",
+    "method.s1.d": "A call or a meeting to understand your business, your customers and what the site needs to do. You get a fixed quote.",
+    "method.s2.t": "I build the site in 5 to 7 working days",
+    "method.s2.d": "You send me your text and photos, or we prepare them together.",
+    "method.s3.t": "You review it",
+    "method.s3.d": "You see the site before it goes live. I make your corrections.",
+    "method.s4.t": "Launch and handover",
+    "method.s4.d": "The site goes live on your domain name. I show you how to make small changes yourself.",
+
+    "about.title": "Who builds your site",
+    "about.role": "IzuTech",
+    "about.photoAlt": "Portrait of Izumi Bérat",
+    "about.p1": "I’m Izumi Bérat, an engineer. I spent many years in IT and the web, including as Director for Web Initiatives at Columbia University in New York.",
+    "about.p2": "Today I build websites for small organisations around me. You deal with one person, from the first call to launch, and I answer you directly.",
+    "about.more": "I also help small businesses automate repetitive work with AI: <a href=\"https://izutech.fr/\">izutech.fr</a>",
+
+    "faq.title": "Questions",
+    "faq.q1": "How long does it take?",
+    "faq.a1": "5 to 7 working days after our first conversation, once I have your text and photos.",
+    "faq.q2": "Can I edit the site myself?",
+    "faq.a2": "Yes, for text and photos. I show you how at handover. For bigger changes, I can handle them with the monthly support option, or on a quote.",
+    "faq.q3": "Are there yearly costs?",
+    "faq.a3": "Hosting is included, with no yearly fees. Only the domain name renews each year, usually for less than €20. It’s in your name: the site belongs to you.",
+    "faq.q4": "What if I have no text or photos?",
+    "faq.a4": "We prepare them together after a conversation. A few photos taken with your phone are often enough.",
+    "faq.q5": "Will my site be found on Google?",
+    "faq.a5": "The site is built so Google can read it well: clear titles, address, opening hours, fast pages. I can’t promise first place, and nobody honestly can.",
+
+    "contact.title": "Let’s talk about your website",
+    "contact.lead": "Tell me in a few lines what you do and what the site should show. I’ll send you a free quote within one working day.",
+    "contact.or": "Would you rather talk it through?",
+    "contact.call": "Book a 30-minute call",
+    "contact.mail": "By email:",
+
+    "form.name": "Your name",
+    "form.email": "Your email",
+    "form.phone": "Phone",
+    "form.business": "Your business",
+    "form.optional": "(optional)",
+    "form.businessPh": "For example: bakery, garage, sports club",
+    "form.message": "Your project",
+    "form.messagePh": "What you do, what the site should show, and any options you’re interested in.",
+    "form.submit": "Request my quote",
+    "form.sending": "Sending…",
+    "form.ok": "Thank you. Your request is on its way. You’ll hear from me within one working day.",
+    "form.err": "Sending didn’t work. Please write to me directly at contact@izutech.fr.",
+    "form.missing": "Please fill in your name, a valid email and your project.",
+
+    "footer.where": "Websites for tradespeople, shops and associations.",
+    "footer.ai": "AI automation for small businesses",
+    "footer.seniors": "Tech help for seniors (in French)",
+    "footer.events": "Event dashboards",
+    "footer.legal": "Legal notice and privacy (in French)",
+
+    "meta.title": "IzuTech · Websites for tradespeople, shops and associations",
+    "meta.description": "A clear, fast website that works on phones. Fixed price of €490, online in 5 to 7 working days. Based in Pau, working across France."
+  };
+
+  var FR_EXTRA = {
+    "langAria": "Switch to English",
+    "navLabel": "Navigation principale",
+    "form.sending": "Envoi en cours…",
+    "form.ok": "Merci. Votre demande est bien partie. Je vous réponds sous 24 h ouvrées.",
+    "form.err": "L'envoi n'a pas fonctionné. Écrivez-moi directement à contact@izutech.fr.",
+    "form.missing": "Merci d'indiquer votre nom, un email valide et votre projet."
+  };
+
+  var STORE_KEY = "izutech-web-lang";
+  var FR = {};
+  var current = "fr";
+
+  function store(get, value) {
+    try {
+      if (get) return window.localStorage.getItem(STORE_KEY);
+      window.localStorage.setItem(STORE_KEY, value);
+    } catch (e) { return null; }
+    return null;
+  }
+
+  // French is the page's own text; capture it once so we can switch back.
+  function captureFrench() {
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n");
+      if (!(k in FR)) FR[k] = el.innerHTML;
     });
-    
-    // Close mobile menu on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu?.classList.contains('active')) {
-            closeMobileMenu();
-            hamburger?.focus();
-        }
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+      FR[el.getAttribute("data-i18n-placeholder")] = el.getAttribute("placeholder");
     });
-    
-    function closeMobileMenu() {
-        hamburger?.classList.remove('active');
-        navMenu?.classList.remove('active');
-        hamburger?.setAttribute('aria-expanded', 'false');
-        document.activeElement?.blur();
-    }
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(element => {
-        element.addEventListener('click', () => {
-            closeMobileMenu();
-        });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      FR[el.getAttribute("data-i18n-alt")] = el.getAttribute("alt");
     });
+    FR["meta.title"] = document.title;
+    var md = document.querySelector('meta[name="description"]');
+    if (md) FR["meta.description"] = md.getAttribute("content");
+    Object.keys(FR_EXTRA).forEach(function (k) { FR[k] = FR_EXTRA[k]; });
+  }
 
-    // Language management
-    const languageSelector = document.getElementById('language-selector');
-    let currentLanguage = 'en';
-    let translations = {};
+  function t(key) {
+    var dict = current === "en" ? EN : FR;
+    return dict[key] != null ? dict[key] : (FR[key] || "");
+  }
 
-    // Load translations
-    async function loadTranslations(lang) {
-        if (translations[lang]) {
-            return translations[lang];
-        }
-
-        try {
-            const response = await fetch('i18n.json');
-            if (!response.ok) throw new Error('Network response was not ok');
-            
-            const allTranslations = await response.json();
-            translations = allTranslations;
-            
-            return translations[lang] || {};
-        } catch (error) {
-            console.error('Error loading translations:', error);
-            return {};
-        }
-    }
-
-    // Update page content with translations
-    function updateContent(translations) {
-        if (!translations.meta) return;
-
-        // Update meta tags
-        document.title = translations.meta.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute('content', translations.meta.description);
-        }
-
-        // Update Open Graph tags
-        const ogTitle = document.querySelector('meta[property="og:title"]');
-        const ogDescription = document.querySelector('meta[property="og:description"]');
-        if (ogTitle) ogTitle.setAttribute('content', translations.meta.title);
-        if (ogDescription) ogDescription.setAttribute('content', translations.meta.description);
-        
-        // Update all elements with data-i18n attribute - FIXED LOGIC
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            const value = getNestedValue(translations, key);
-            
-            if (value !== undefined && value !== null) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.setAttribute('placeholder', value);
-                } else if (element.tagName === 'IMG' && element.hasAttribute('alt')) {
-                    element.setAttribute('alt', value);
-                } else if (element.hasAttribute('aria-label') && element.tagName !== 'A' && element.tagName !== 'BUTTON') {
-                    // Only update aria-label for non-interactive elements
-                    element.setAttribute('aria-label', value);
-                } else {
-                    // For links and buttons, always update text content
-                    element.textContent = value;
-                    // Also update aria-label if it exists for accessibility
-                    if (element.hasAttribute('aria-label')) {
-                        element.setAttribute('aria-label', value);
-                    }
-                }
-            }
-        });
-
-        // Update elements with data-i18n-placeholder attribute
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-            const key = element.getAttribute('data-i18n-placeholder');
-            const value = getNestedValue(translations, key);
-            
-            if (value !== undefined && value !== null) {
-                element.setAttribute('placeholder', value);
-            }
-        });
-
-        // Update HTML lang attribute
-        document.documentElement.setAttribute('lang', currentLanguage);
-        
-        // Update language selector
-        if (languageSelector) {
-            languageSelector.value = currentLanguage;
-        }
-    }
-
-    // Helper function to get nested object values
-    function getNestedValue(obj, path) {
-        return path.split('.').reduce((current, key) => {
-            return current && current[key] !== undefined ? current[key] : undefined;
-        }, obj);
-    }
-
-    // Initialize language
-    async function initLanguage() {
-        const browserLang = navigator.language || navigator.userLanguage;
-        const userLang = browserLang.startsWith('fr') ? 'fr' : 'en';
-        
-        currentLanguage = localStorage.getItem('preferredLanguage') || userLang;
-        
-        const loadedTranslations = await loadTranslations(currentLanguage);
-        updateContent(loadedTranslations);
-    }
-
-    // Language selector change event
-    if (languageSelector) {
-        languageSelector.addEventListener('change', async function(e) {
-            currentLanguage = e.target.value;
-            localStorage.setItem('preferredLanguage', currentLanguage);
-            
-            const loadedTranslations = await loadTranslations(currentLanguage);
-            updateContent(loadedTranslations);
-            
-            // Update hreflang tags dynamically
-            updateHreflangTags(currentLanguage);
-            
-            // Close mobile menu after language change on mobile
-            if (window.innerWidth <= 768 && navMenu?.classList.contains('active')) {
-                closeMobileMenu();
-            }
-        });
-    }
-
-    // Update hreflang tags dynamically
-    function updateHreflangTags(lang) {
-        const baseUrl = window.location.origin + window.location.pathname;
-        const alternateLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
-        
-        alternateLinks.forEach(link => {
-            const hreflang = link.getAttribute('hreflang');
-            if (hreflang === lang || hreflang === 'x-default') {
-                link.setAttribute('href', `${baseUrl}?lang=${lang}`);
-            }
-        });
-    }
-
-    // Lazy load images
-    function initLazyLoading() {
-        const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
-        
-        if ('IntersectionObserver' in window) {
-            const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const lazyImage = entry.target;
-                        lazyImage.src = lazyImage.dataset.src || lazyImage.src;
-                        lazyImage.classList.add('loaded');
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                });
-            });
-
-            lazyImages.forEach(function(lazyImage) {
-                lazyImageObserver.observe(lazyImage);
-            });
-        } else {
-            // Fallback for browsers without IntersectionObserver
-            lazyImages.forEach(function(lazyImage) {
-                lazyImage.src = lazyImage.dataset.src || lazyImage.src;
-                lazyImage.classList.add('loaded');
-            });
-        }
-    }
-
-    // Mobile contact section interactions
-    function initContactSection() {
-        const showFormBtn = document.querySelector('.show-form-btn');
-        const backToOptions = document.querySelector('.back-to-options');
-        const contactFormAndTrust = document.querySelector('.contact-form-and-trust');
-        const contactOptions = document.querySelector('.contact-options');
-        
-        if (showFormBtn && contactFormAndTrust && contactOptions) {
-            showFormBtn.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    contactOptions.style.display = 'none';
-                    contactFormAndTrust.classList.add('active');
-                    // Update ARIA attributes
-                    showFormBtn.setAttribute('aria-expanded', 'true');
-                    // Smooth scroll to form
-                    contactFormAndTrust.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-            });
-        }
-        
-        if (backToOptions && contactFormAndTrust && contactOptions) {
-            backToOptions.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    contactFormAndTrust.classList.remove('active');
-                    contactOptions.style.display = 'grid';
-                    // Update ARIA attributes
-                    const showFormBtn = document.querySelector('.show-form-btn');
-                    if (showFormBtn) showFormBtn.setAttribute('aria-expanded', 'false');
-                    // Smooth scroll back to options
-                    contactOptions.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-            });
-        }
-    }
-
-    // Enhanced form submission
-    function initContactForm() {
-        const contactForm = document.getElementById('lead-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                // Basic validation
-                const name = document.getElementById('name');
-                const email = document.getElementById('email');
-                const message = document.getElementById('message');
-                let isValid = true;
-
-                // Reset previous errors
-                contactForm.querySelectorAll('.error-message').forEach(msg => msg.remove());
-                contactForm.querySelectorAll('.error').forEach(field => field.classList.remove('error'));
-
-                // Validate required fields
-                if (!name?.value.trim()) {
-                    showError(name, 'Name is required');
-                    isValid = false;
-                }
-
-                if (!email?.value.trim()) {
-                    showError(email, 'Email is required');
-                    isValid = false;
-                } else if (!isValidEmail(email.value)) {
-                    showError(email, 'Please enter a valid email address');
-                    isValid = false;
-                }
-
-                if (!message?.value.trim()) {
-                    showError(message, 'Please tell us about your project');
-                    isValid = false;
-                }
-
-                if (isValid) {
-                    // Show loading state
-                    const submitBtn = contactForm.querySelector('button[type="submit"]');
-                    const form = contactForm;
-                    form.classList.add('form-loading');
-                    submitBtn.disabled = true;
-
-                    try {
-                        const formData = new FormData(form);
-                        
-                        const response = await fetch(form.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        });
-
-                        if (response.ok) {
-                            // Show success message
-                            showSuccessMessage();
-                        } else {
-                            throw new Error('Form submission failed');
-                        }
-                        
-                    } catch (error) {
-                        console.error('Form submission error:', error);
-                        alert('Sorry, there was an error sending your message. Please try again or email us directly.');
-                    } finally {
-                        form.classList.remove('form-loading');
-                        submitBtn.disabled = false;
-                    }
-                }
-            });
-        }
-    }
-
-    function showSuccessMessage() {
-        const form = document.getElementById('lead-form');
-        const successMessage = document.getElementById('form-success');
-        
-        if (form && successMessage) {
-            // Hide form, show success message
-            form.style.display = 'none';
-            successMessage.style.display = 'block';
-            
-            // Smooth scroll to success message
-            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            
-            // Update ARIA live region for screen readers
-            const successTitle = successMessage.querySelector('h3');
-            if (successTitle) {
-                const liveRegion = document.createElement('div');
-                liveRegion.setAttribute('aria-live', 'polite');
-                liveRegion.setAttribute('aria-atomic', 'true');
-                liveRegion.style.cssText = 'position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;';
-                liveRegion.textContent = successTitle.textContent + ' ' + successMessage.querySelector('p').textContent;
-                document.body.appendChild(liveRegion);
-                
-                // Clean up after a delay
-                setTimeout(() => {
-                    document.body.removeChild(liveRegion);
-                }, 5000);
-            }
-        }
-    }
-
-    function showError(field, message) {
-        if (!field) return;
-        
-        field.classList.add('error');
-        const errorElement = document.createElement('div');
-        errorElement.className = 'error-message';
-        errorElement.style.cssText = 'color: #E74C3C; font-size: 0.875rem; margin-top: 0.25rem;';
-        errorElement.textContent = message;
-        field.parentNode.appendChild(errorElement);
-        
-        // Focus the first error field
-        if (!document.querySelector('.error:focus')) {
-            field.focus();
-        }
-    }
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+  function apply(lang) {
+    current = lang === "en" ? "en" : "fr";
+    var dict = current === "en" ? EN : FR;
+    document.documentElement.lang = current;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var v = dict[el.getAttribute("data-i18n")];
+      if (v != null) el.innerHTML = v;
     });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+      var v = dict[el.getAttribute("data-i18n-placeholder")];
+      if (v != null) el.setAttribute("placeholder", v);
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var v = dict[el.getAttribute("data-i18n-alt")];
+      if (v != null) el.setAttribute("alt", v);
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var v = dict[el.getAttribute("data-i18n-aria")];
+      if (v != null) el.setAttribute("aria-label", v);
+    });
+    if (dict["meta.title"]) document.title = dict["meta.title"];
+    var md = document.querySelector('meta[name="description"]');
+    if (md && dict["meta.description"]) md.setAttribute("content", dict["meta.description"]);
+    var btn = document.getElementById("lang-toggle");
+    if (btn) btn.textContent = current === "en" ? "FR" : "EN";
+  }
 
-    // Initialize the page
-    initLanguage();
-    initLazyLoading();
-    initContactSection();
-    initContactForm();
+  // French unless the visitor asked for English, or their device is set to a language other than French.
+  function initialLanguage() {
+    var param = null;
+    try { param = new URLSearchParams(window.location.search).get("lang"); } catch (e) {}
+    if (param === "en" || param === "fr") return param;
+    var saved = store(true);
+    if (saved === "en" || saved === "fr") return saved;
+    var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || "fr"];
+    var primary = String(langs[0] || "fr").toLowerCase();
+    return primary.indexOf("fr") === 0 ? "fr" : "en";
+  }
 
-    // Preload other language for better performance
-    const browserLang = navigator.language || navigator.userLanguage;
-    const otherLang = browserLang.startsWith('fr') ? 'en' : 'fr';
-    loadTranslations(otherLang);
-});
+  function setupForm() {
+    var form = document.getElementById("lead-form");
+    if (!form) return;
+    var status = document.getElementById("form-status");
+    var submit = document.getElementById("f-submit");
 
-// Make resetForm globally available for the success message button
-window.resetForm = function() {
-    const form = document.getElementById('lead-form');
-    const successMessage = document.getElementById('form-success');
-    
-    if (form && successMessage) {
-        // Show form, hide success message
-        form.style.display = 'block';
-        successMessage.style.display = 'none';
-        
-        // Reset form fields
-        form.reset();
-        
-        // Clear any error messages
-        form.querySelectorAll('.error-message').forEach(msg => msg.remove());
-        form.querySelectorAll('.error').forEach(field => field.classList.remove('error'));
-        
-        // Scroll to form
-        form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-};
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.className = "form-status";
+      var name = form.elements.name, email = form.elements.email, task = form.elements.message;
+      var bad = false;
+      [name, email, task].forEach(function (f) {
+        var invalid = !f.value.trim() || (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
+        f.setAttribute("aria-invalid", invalid ? "true" : "false");
+        if (invalid) bad = true;
+      });
+      if (bad) { status.textContent = t("form.missing"); status.classList.add("err"); return; }
+
+      submit.disabled = true;
+      var label = submit.textContent;
+      submit.textContent = t("form.sending");
+      fetch(form.action, { method: "POST", body: new FormData(form), headers: { "Accept": "application/json" } })
+        .then(function (r) {
+          if (!r.ok) throw new Error("status " + r.status);
+          form.reset();
+          status.textContent = t("form.ok");
+          status.classList.add("ok");
+        })
+        .catch(function () {
+          status.textContent = t("form.err");
+          status.classList.add("err");
+        })
+        .finally(function () { submit.disabled = false; submit.textContent = label; });
+    });
+  }
+
+  function init() {
+    captureFrench();
+    apply(initialLanguage());
+    var btn = document.getElementById("lang-toggle");
+    if (btn) btn.addEventListener("click", function () {
+      var next = current === "en" ? "fr" : "en";
+      apply(next);
+      store(false, next);
+    });
+    setupForm();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
