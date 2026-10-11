@@ -90,7 +90,8 @@
       "project1": {
         "title": "Coq Carlanais",
         "category": "Basketball Club",
-        "description": "A comprehensive website for a local basketball club featuring team schedules, registration forms, sponsorship programs, and event management."
+        "description": "A comprehensive website for a local basketball club featuring team schedules, registration forms, sponsorship programs, and event management.",
+        "note": "This site is no longer online. You can still see a preview of it."
       },
       "project2": {
         "title": "André Motoculture",
@@ -116,12 +117,13 @@
         "subtitle": "Let's create a website that showcases your business and drives results",
         "primary": "Start Your Project",
         "secondary": "Book a Free Consultation"
-      }
+      },
+      "viewPreview": "See a Preview"
     },
     "contact": {
       "title": "Ready for Your New Website?",
       "trust": {
-        "title": "Why 100+ Businesses Chose IzuTech",
+        "title": "Why Choose IzuTech",
         "points": [
           {
             "icon": "🚀",
@@ -157,7 +159,7 @@
           "button": "Request Your Quote"
         },
         "call": {
-          "title": "Quick 15-min call",
+          "title": "Quick 30-min call",
           "description": "A free, no-obligation call to discuss your needs and get immediate answers.",
           "button": "Schedule a Call"
         },
@@ -216,8 +218,9 @@
         }
       },
       "tagline": "Accelerating Business Digital Transformation with AI",
-      "copyright": "© 2025 IzuTech. All rights reserved.",
-      "privacy": "Your data is processed in compliance with GDPR and secured."
+      "copyright": "© 2026 IzuTech. All rights reserved.",
+      "privacy": "Your data is processed in compliance with GDPR and secured.",
+      "legal": "Legal notice and privacy (in French)"
     }
   },
   "fr": {
@@ -311,7 +314,8 @@
       "project1": {
         "title": "Coq Carlanais",
         "category": "Club de Basket",
-        "description": "Un site web complet pour un club de basket local avec planning des équipes, formulaires d'inscription, programmes de sponsoring et gestion d'événements."
+        "description": "Un site web complet pour un club de basket local avec planning des équipes, formulaires d'inscription, programmes de sponsoring et gestion d'événements.",
+        "note": "Ce site n'est plus en ligne. Vous pouvez en voir un aperçu."
       },
       "project2": {
         "title": "André Motoculture",
@@ -337,7 +341,8 @@
         "subtitle": "Créons ensemble un site web qui met en valeur votre entreprise et génère des résultats",
         "primary": "Démarrer Mon Projet",
         "secondary": "Consultation Gratuite"
-      }
+      },
+      "viewPreview": "Voir un aperçu"
     },
     "contact": {
       "title": "Lançons Votre Projet Ensemble",
@@ -379,7 +384,7 @@
         },
         "call": {
           "title": "Consultation téléphonique",
-          "description": "Échangeons 15 minutes gratuitement pour répondre à toutes vos questions.",
+          "description": "Échangeons 30 minutes gratuitement pour répondre à toutes vos questions.",
           "button": "Planifier un appel"
         },
         "email": {
@@ -437,8 +442,9 @@
         }
       },
       "tagline": "Nous Accélérons la Transformation Digitale des Entreprises avec l'IA",
-      "copyright": "© 2025 IzuTech. Tous droits réservés.",
-      "privacy": "Vos données sont traitées en conformité avec le RGPD et sécurisées."
+      "copyright": "© 2026 IzuTech. Tous droits réservés.",
+      "privacy": "Vos données sont traitées en conformité avec le RGPD et sécurisées.",
+      "legal": "Mentions légales et confidentialité"
     }
   }
 }

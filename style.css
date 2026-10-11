@@ -1464,3 +1464,20 @@ select:focus-visible {
     pointer-events: none;
     opacity: 0.8;
 }
+
+/* Portfolio: note for archived sites, and overlay reachable on touch screens */
+.portfolio-content p.portfolio-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+@media (hover: none) {
+    .portfolio-overlay {
+        opacity: 1;
+        inset: auto 0 0 0;
+        height: auto;
+        padding: 0.6rem;
+        background: rgba(10, 37, 64, 0.85);
+    }
+    .portfolio-link { transform: none; padding: 8px 18px; }
+}
