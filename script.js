@@ -85,7 +85,8 @@
 
     "contact.title": "Let’s talk about your website",
     "contact.lead": "Tell me in a few lines what you do and what the site should show. I’ll send you a free quote within one working day.",
-    "contact.or": "Would you rather talk it through? Say so in your message and I’ll suggest a time for a call.",
+    "contact.or": "Would you rather talk it through?",
+    "contact.call": "Book a 30-minute call",
     "contact.mail": "By email:",
 
     "form.name": "Your name",
